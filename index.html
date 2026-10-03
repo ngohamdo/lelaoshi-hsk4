@@ -1,0 +1,1114 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>黎老师中文班</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#F3F5F3; --surface:#FFFFFF; --surface-2:#E9EEEB; --ink:#16212A; --ink-2:#51606B; --line:#D3DCD7;
+  --accent:#0D7563; --accent-ink:#FFFFFF; --accent-soft:#D4EDE6; --seal:#B23F2C;
+  --good:#2C8649; --good-soft:#DCF0E2; --warn:#A96F17; --warn-soft:#F6EBD4; --bad:#BE3A2E; --bad-soft:#F7DEDA;
+  --shadow:0 1px 2px rgba(20,40,35,.06),0 4px 16px rgba(20,40,35,.06);
+  --hz:"Noto Serif SC","Songti SC","SimSun",serif;
+  --ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0E1417; --surface:#162025; --surface-2:#1E2A30; --ink:#E4EBE8; --ink-2:#9AA9B1; --line:#2A3A41;
+    --accent:#3DB39B; --accent-ink:#04201A; --accent-soft:#163A33; --seal:#E27560;
+    --good:#5DBB7C; --good-soft:#193426; --warn:#D9A544; --warn-soft:#3A2F17; --bad:#E86A5D; --bad-soft:#3E1D1A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0E1417; --surface:#162025; --surface-2:#1E2A30; --ink:#E4EBE8; --ink-2:#9AA9B1; --line:#2A3A41;
+  --accent:#3DB39B; --accent-ink:#04201A; --accent-soft:#163A33; --seal:#E27560;
+  --good:#5DBB7C; --good-soft:#193426; --warn:#D9A544; --warn-soft:#3A2F17; --bad:#E86A5D; --bad-soft:#3E1D1A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:15px;line-height:1.55}
+.hz{font-family:var(--hz);font-weight:500}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* top bar */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.top-in{max-width:1080px;margin:0 auto;padding-inline:16px;display:flex;align-items:center;gap:16px;min-height:56px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+.seal{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:6px;background:var(--seal);color:#fff;font-family:var(--hz);font-size:17px;font-weight:700}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.tabs::-webkit-scrollbar{display:none}
+.tab{border:0;background:none;padding:8px 12px;border-radius:8px;color:var(--ink-2);font-weight:500;white-space:nowrap}
+.tab:hover{background:var(--surface-2);color:var(--ink)}
+.tab[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.who{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)}
+.who select{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:4px 8px}
+
+main{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:24px 64px}
+h1{font-size:26px;line-height:1.25;margin:0 0 4px;text-wrap:balance}
+h2{font-size:19px;margin:0 0 12px;text-wrap:balance}
+h3{font-size:16px;margin:0 0 8px}
+.lede{color:var(--ink-2);margin:0 0 20px;max-width:65ch}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-2);font-weight:600}
+.muted{color:var(--ink-2)}
+.small{font-size:13px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.stack{display:grid;gap:16px}
+.sp{flex:1}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 14px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--ink-2)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.pri:hover{filter:brightness(1.07)}
+.btn.ghost{border-color:transparent;background:none}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.icon-btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;width:34px;height:34px;display:inline-grid;place-items:center;flex:none}
+.icon-btn:hover{border-color:var(--accent);color:var(--accent)}
+.icon-btn svg{width:16px;height:16px}
+.field{display:grid;gap:4px;font-size:13px;color:var(--ink-2)}
+.field select,.field input{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 10px;font-size:14px;color:var(--ink);min-width:0}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);font-weight:500;white-space:nowrap}
+.chip.acc{background:var(--accent-soft);color:var(--accent)}
+.chip.good{background:var(--good-soft);color:var(--good)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.bad{background:var(--bad-soft);color:var(--bad)}
+
+/* roadmap */
+.book-head{display:flex;align-items:baseline;gap:12px;margin:28px 0 12px;flex-wrap:wrap}
+.book-head .hz{font-size:20px}
+.lessons{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.lesson{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:10px;text-align:left;color:inherit}
+button.lesson:hover{border-color:var(--accent)}
+.lesson.done{border-color:var(--accent)}
+.lesson-num{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.lesson-num b{font-size:18px;line-height:1.4}
+.lesson-num b .hz{font-size:22px;font-weight:700;margin-left:4px}
+.lesson .words{font-family:var(--hz);font-size:17px;color:var(--ink);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{height:6px;border-radius:999px;background:var(--surface-2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.lesson.soon{opacity:.6;border-style:dashed;background:transparent}
+
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat b{display:block;font-size:24px;font-variant-numeric:tabular-nums;line-height:1.2}
+.stat span{font-size:13px;color:var(--ink-2)}
+
+/* vocab table */
+.filters{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin-bottom:14px}
+.filters .field{flex:1 1 160px}
+.lesson-picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}
+.lesson-pick{display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer}
+.lesson-pick:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.lesson-pick input{margin-top:4px;accent-color:var(--accent);flex:none}
+.lesson-pick span{min-width:0;line-height:1.35}.lesson-pick .hz{font-weight:700}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.w{font-family:var(--hz);font-size:20px;white-space:nowrap}
+td.py{white-space:nowrap;color:var(--accent);font-weight:500}
+td.ex{font-family:var(--hz);font-size:14px;color:var(--ink-2);max-width:380px}
+.lvl{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--line);margin-right:6px}
+.lvl.l1{background:var(--warn)}.lvl.l2{background:var(--accent)}.lvl.l3{background:var(--good)}
+
+/* flashcard */
+.fc-wrap{display:grid;gap:16px;max-width:620px;margin:0 auto}
+.card{position:relative;min-height:320px;border-radius:16px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;place-items:center;text-align:center;padding:28px 20px;cursor:pointer;user-select:none}
+.card .big{font-family:var(--hz);font-size:clamp(56px,14vw,92px);line-height:1.1;font-weight:500}
+.card .vi{font-size:clamp(22px,5vw,30px);font-weight:600;text-wrap:balance}
+.card .py{color:var(--accent);font-size:22px;font-weight:500;margin-top:6px}
+.card .meta{margin-top:10px}
+.card .exs{font-family:var(--hz);font-size:17px;margin-top:16px;color:var(--ink-2);max-width:48ch;text-wrap:pretty}
+.card .hint{position:absolute;bottom:12px;left:0;right:0;font-size:12px;color:var(--ink-2)}
+.card .spk{position:absolute;top:12px;right:12px}
+.rate{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rate button{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:10px 6px;font-weight:600;display:grid;gap:2px}
+.rate button small{font-weight:400;color:var(--ink-2);font-size:11px}
+.rate .r0{border-color:var(--bad);color:var(--bad)}
+.rate .r1{border-color:var(--warn);color:var(--warn)}
+.rate .r2{border-color:var(--accent);color:var(--accent)}
+.rate .r3{border-color:var(--good);color:var(--good)}
+.progress-line{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.kbd{font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--ink-2)}
+
+/* quiz */
+.q{max-width:680px;margin:0 auto;display:grid;gap:14px}
+.q-prompt{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center;display:grid;gap:10px;justify-items:center}
+.q-prompt .big{font-family:var(--hz);font-size:52px;line-height:1.15}
+.q-prompt .sent{font-family:var(--hz);font-size:21px;line-height:1.7;text-wrap:pretty}
+.q-prompt .blank{display:inline-block;min-width:2.6em;border-bottom:2px solid var(--accent);margin:0 2px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.opts{grid-template-columns:1fr}}
+.opt{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px 14px;text-align:left;display:flex;gap:10px;align-items:center;min-height:52px}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt .k{flex:none;width:24px;height:24px;border-radius:6px;background:var(--surface-2);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--ink-2)}
+.opt .t-hz{font-family:var(--hz);font-size:22px}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft)}
+.opt.ok{border-color:var(--good);background:var(--good-soft)}
+.opt.no{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{cursor:default}
+.explain{border-left:3px solid var(--accent);background:var(--surface);padding:12px 14px;border-radius:0 10px 10px 0;font-size:14px}
+.explain .hz{font-size:16px}
+.typed{display:flex;gap:8px}
+.typed input{flex:1;min-width:0;font-family:var(--hz);font-size:24px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);text-align:center}
+
+/* grammar */
+.gp{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gp summary{list-style:none;padding:16px 18px;display:flex;gap:12px;align-items:center;cursor:pointer;flex-wrap:wrap}
+.gp summary::-webkit-details-marker{display:none}
+.gp summary .hz{font-size:20px}
+.gp[open] summary{border-bottom:1px solid var(--line)}
+.gp-body{padding:16px 18px;display:grid;gap:14px}
+.formula{font-family:var(--hz);font-size:18px;background:var(--surface-2);padding:10px 14px;border-radius:8px;overflow-x:auto}
+.ex-list{margin:0;padding-left:18px;display:grid;gap:6px}
+.ex-list .hz{font-size:17px}
+.mini-q{display:grid;gap:8px;padding:12px;border:1px dashed var(--line);border-radius:10px}
+.mini-q .sent{font-family:var(--hz);font-size:18px}
+.mini-opts{display:flex;gap:8px;flex-wrap:wrap}
+.mini-opts .opt{min-height:0;padding:6px 14px}
+.mini-opts .opt .t-hz{font-size:18px}
+
+/* mock */
+.exam-bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:20px}
+.timer.low{color:var(--bad)}
+.palette{display:flex;flex-wrap:wrap;gap:4px}
+.palette button{width:30px;height:30px;border-radius:6px;border:1px solid var(--line);background:var(--surface);font-size:12px;font-variant-numeric:tabular-nums}
+.palette button.ans{background:var(--accent-soft);border-color:var(--accent)}
+.palette button.cur{outline:2px solid var(--ink);outline-offset:1px}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.part{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.part .hz{font-size:22px}
+.part ul{margin:8px 0 0;padding-left:18px;font-size:14px;color:var(--ink-2)}
+.score-big{font-size:48px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+
+.list{display:grid;gap:8px}
+.list-item{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.list-item .hz{font-size:22px;min-width:3em}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;z-index:50;max-width:calc(100% - 32px)}
+.auth-area{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-left:auto}
+.auth-trigger,.auth-logout{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 13px;font-weight:650;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.auth-trigger:hover,.auth-logout:hover{border-color:var(--accent);color:var(--accent)}
+.auth-user{display:flex;align-items:center;gap:8px}.auth-avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font-weight:700;text-transform:uppercase}
+.auth-modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:rgba(20,20,30,.44);backdrop-filter:blur(14px)}
+.auth-dialog{position:relative;width:min(430px,100%);background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 30px 90px rgba(20,20,36,.25)}
+.auth-dialog h2{font-size:28px;margin-bottom:6px}.auth-dialog .field{font-size:14px}.auth-dialog .field input{min-height:48px;font-size:16px}
+.auth-close{position:absolute;right:14px;top:14px;border:0;background:var(--surface-2);width:34px;height:34px;border-radius:50%;font-size:20px;line-height:1}
+.auth-error{margin:0;color:var(--bad);font-size:13px}.auth-note{padding:11px 12px;border-radius:10px;background:var(--warn-soft);color:var(--warn);font-size:13px}
+body.auth-required main,body.auth-required .tabs{pointer-events:none;user-select:none;filter:blur(3px);opacity:.48}
+.empty{text-align:center;padding:40px 16px;color:var(--ink-2)}
+@media (prefers-reduced-motion:no-preference){
+  .card{transition:transform .15s ease}
+  .card:active{transform:scale(.99)}
+}
+@media (max-width:640px){
+  .who{width:100%}
+  h1{font-size:22px}
+}
+</style>
+
+<!--
+Direction 03 — iPad Study Workspace / Apple design-team interpretation
+Assumptions: wide screens are the primary long-session study environment.
+Form source: the course outline becomes a calm sidebar while the lesson notebook
+gets a broad, editorial workspace; mobile collapses back to a compact header.
+-->
+<style>
+:root{
+  --bg:#F6F6F8;--surface:#FFFFFF;--surface-2:#F0F0F4;--ink:#19191F;--ink-2:#686874;--line:#DEDEE5;
+  --accent:#5B5BD6;--accent-ink:#FFFFFF;--accent-soft:#ECECFF;--seal:#D94B3D;
+  --good:#2D9954;--good-soft:#E6F5EB;--warn:#B97816;--warn-soft:#FFF2D9;--bad:#D6453A;--bad-soft:#FDE9E7;
+  --shadow:0 12px 34px rgba(31,31,48,.08);
+  --ui:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+}
+body{font-family:var(--ui);background:linear-gradient(120deg,#F2F1F7 0,#FAFAFC 48%,#F3F5FA 100%);letter-spacing:-.006em}
+.top{position:fixed;inset:0 auto 0 0;width:272px;height:100dvh;border:0;border-right:1px solid rgba(255,255,255,.72);background:rgba(235,234,242,.76);backdrop-filter:blur(34px) saturate(145%);box-shadow:12px 0 40px rgba(37,35,58,.07)}
+.top-in{height:100%;max-width:none;padding:24px 16px;display:flex;flex-direction:column;align-items:stretch;gap:20px;flex-wrap:nowrap}
+.brand{font-size:18px;padding:0 8px;letter-spacing:-.025em}.seal{width:40px;height:40px;border-radius:12px}.tabs{display:flex;flex-direction:column;gap:4px;overflow:visible;flex:0}
+.tab{width:100%;min-height:44px;text-align:left;border-radius:12px;padding:9px 12px;color:#595967;font-weight:600}.tab:hover{background:rgba(255,255,255,.52)}.tab[aria-current="page"]{background:rgba(255,255,255,.78);color:#3B3BAA;box-shadow:0 7px 20px rgba(39,35,75,.09),inset 0 1px 0 #fff}
+.who{margin-top:auto;width:100%;display:grid;gap:6px;padding:12px 8px 4px;font-size:12px}.who select{width:100%;min-height:42px;border:1px solid rgba(79,76,104,.12);border-radius:11px;background:rgba(255,255,255,.68);padding:8px 10px}
+.auth-area{margin-top:auto;width:100%;padding:12px 8px 4px}.auth-trigger,.auth-logout{width:100%;justify-content:center;border:0;background:rgba(255,255,255,.72);box-shadow:0 1px 0 rgba(31,31,47,.07)}.auth-user{width:100%}.auth-user .auth-logout{flex:1}
+main{max-width:1280px;margin:0 0 0 272px;padding:54px clamp(32px,5vw,76px) 100px}
+h1{font-size:clamp(38px,4.6vw,64px);line-height:1.02;letter-spacing:-.055em;margin-bottom:14px;max-width:850px}h2{font-size:23px;letter-spacing:-.03em}.lede{font-size:17px;line-height:1.62;max-width:760px}.eyebrow{color:#6661B8;font-weight:700}
+.summary{grid-template-columns:repeat(12,1fr);gap:14px}.stat{grid-column:span 2;border:0;border-radius:18px;padding:20px;background:#fff;box-shadow:0 1px 0 rgba(31,31,47,.05)}.stat:first-child{grid-column:span 6;background:linear-gradient(135deg,#5E5ED8,#7E79E6);color:#fff;box-shadow:0 18px 38px rgba(83,80,197,.24)}.stat:first-child span{color:rgba(255,255,255,.78)}.stat:first-child b{font-size:42px}.stat b{font-size:30px;letter-spacing:-.045em}.stat span{display:block;margin-top:3px}
+.book-head{margin:38px 0 14px}.book-head .hz{font-size:24px}.lessons{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.lesson{border:0;border-radius:16px;padding:20px;min-height:118px;box-shadow:0 1px 0 rgba(31,31,47,.06);transition:.18s ease}.lesson:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(38,36,65,.09)}.lesson.done{box-shadow:inset 4px 0 0 var(--accent),0 1px 0 rgba(31,31,47,.06)}
+.btn{min-height:44px;border:0;border-radius:12px;background:#fff;padding:10px 16px;box-shadow:0 1px 0 rgba(31,31,47,.08)}.btn.pri{box-shadow:0 9px 22px rgba(91,91,214,.22)}
+.panel,.gp,.q-prompt,.part,.list-item,.tbl-wrap{border:0;box-shadow:0 1px 0 rgba(31,31,47,.06)}.panel{border-radius:18px;padding:24px}.chip{background:#F0F0F4}.bar{height:6px;background:#E8E8EE}
+.filters{padding:14px;border-radius:16px;background:rgba(235,234,242,.74);backdrop-filter:blur(18px)}.field select,.field input{min-height:44px;border:0;border-radius:10px;background:#fff;padding:9px 11px;box-shadow:0 1px 0 rgba(31,31,47,.08)}
+.tbl-wrap{border-radius:16px}th{background:#F1F1F5;position:sticky;top:0}.card{border:0;border-radius:24px;min-height:400px;box-shadow:0 24px 64px rgba(39,37,64,.12)}.icon-btn{border:0;background:#F1F1F5}.opt,.rate button{border-color:#E2E2E8;border-radius:12px}.gp{border-radius:16px}.formula{border-radius:10px}.toast{left:auto;right:28px;bottom:28px;transform:none;border-radius:14px;background:rgba(30,30,38,.88);color:#fff;backdrop-filter:blur(20px);box-shadow:var(--shadow)}
+@media(min-width:1180px){.stack>section{padding:6px 0}.fc-wrap{max-width:720px}.q{max-width:760px}}
+@media(max-width:980px){.top{position:sticky;inset:auto;top:env(safe-area-inset-top,0px);width:100%;height:auto;border-right:0;border-bottom:1px solid rgba(80,78,105,.12);box-shadow:0 8px 28px rgba(37,35,58,.06)}.top-in{height:auto;max-width:none;padding:10px 16px;display:flex;flex-direction:row;align-items:center;gap:14px;flex-wrap:wrap}.brand{padding:0;flex:1}.tabs{order:3;flex:1 0 100%;flex-direction:row;overflow-x:auto}.tab{width:auto;white-space:nowrap;min-height:38px;padding:7px 12px}.auth-area{margin:0;width:auto;display:flex;padding:0}.auth-trigger,.auth-logout{width:auto}.auth-user{width:auto}main{margin:0;max-width:1180px;padding:38px 24px 90px}.summary{grid-template-columns:1fr 1fr}.stat,.stat:first-child{grid-column:auto}.stat:first-child b{font-size:32px}}
+@media(max-width:620px){.seal{width:36px;height:36px}.brand{font-size:16px}.who select{width:112px;min-width:112px;max-width:112px}.top-in{padding-inline:12px}.tabs{margin-inline:-12px;padding-inline:12px}.lessons{grid-template-columns:1fr}.summary{gap:10px}.stat{padding:15px}.stat b,.stat:first-child b{font-size:26px}main{padding:26px 16px 84px}h1{font-size:36px}.toast{left:16px;right:16px;bottom:20px;text-align:center}}
+</style>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand"><span class="seal">汉</span>黎老师中文班</div>
+    <nav class="tabs" id="tabs" aria-label="Mục chính"></nav>
+    <div class="auth-area">
+      <button class="auth-trigger" id="loginBtn" type="button" aria-haspopup="dialog">Đăng nhập</button>
+      <div class="auth-user" id="authUser" hidden><span class="auth-avatar" id="authAvatar"></span><button class="auth-logout" id="logoutBtn" type="button"><span id="authName"></span> · Đăng xuất</button></div>
+    </div>
+  </div>
+</header>
+<main id="view"></main>
+<div class="toast" id="toast" hidden></div>
+
+<div class="auth-modal" id="authModal" hidden>
+  <section class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="auth-close" id="authClose" type="button" aria-label="Đóng">×</button>
+    <div class="eyebrow">黎老师中文班</div>
+    <h2 id="authTitle">Đăng nhập</h2>
+    <p class="muted" style="margin:0 0 18px">Dùng tài khoản học viên được giáo viên cung cấp.</p>
+    <div class="auth-note" id="authSetupNote" hidden>Supabase chưa được cấu hình. Hãy điền Project URL và Publishable key trong <code>supabase-config.js</code>.</div>
+    <form class="stack" id="loginForm">
+      <label class="field" for="loginUsername">Tên đăng nhập<input id="loginUsername" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="Ví dụ: thuytien" required></label>
+      <label class="field" for="loginPassword">Mật khẩu<input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" minlength="8" required></label>
+      <p class="auth-error" id="authError" hidden></p>
+      <button class="btn pri" id="loginSubmit" type="submit" style="justify-content:center">Đăng nhập</button>
+    </form>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./supabase-config.js"></script>
+<script>
+const VOCAB = [{"id":"v001","bai":null,"tu":"啊","pinyin":"ā","tuLoai":"thán từ","nghia":"à; ồ","viDu":"是啊，后来我就不接那么多项目了。"},{"id":"v002","bai":null,"tu":"爱情","pinyin":"àiqíng","tuLoai":"danh từ","nghia":"tình yêu","viDu":"杨同乐和王一飞认识后，很聊得来，两人之间慢慢产生了爱情，最后成了夫妻。"},{"id":"v003","bai":5,"tu":"安排","pinyin":"ānpái","tuLoai":"động từ","nghia":"sắp xếp; bố trí","viDu":"在时间安排方面，你可以再想一想。"},{"id":"v004","bai":6,"tu":"按时","pinyin":"ànshí","tuLoai":"trạng từ","nghia":"đúng giờ","viDu":"医生还让她回家以后按时吃药，多喝水，多休息。"},{"id":"v005","bai":5,"tu":"按照","pinyin":"ànzhào","tuLoai":"giới từ","nghia":"theo; căn cứ theo","viDu":"昨天，小张按照客户的年龄和性别写好了调查结果。"},{"id":"v006","bai":null,"tu":"熬夜","pinyin":"áoyè","tuLoai":"động từ","nghia":"thức khuya","viDu":"他最近经常熬夜，所以工作效率下降了。"},{"id":"v007","bai":null,"tu":"保护","pinyin":"bǎohù","tuLoai":"động từ","nghia":"bảo vệ","viDu":"为了保护环境，我们学校每年都举办垃圾分类活动。"},{"id":"v008","bai":3,"tu":"保证","pinyin":"bǎozhèng","tuLoai":"động từ","nghia":"bảo đảm; cam đoan","viDu":"国家会通过什么手段来保证个人信息安全?"},{"id":"v009","bai":1,"tu":"本科","pinyin":"běnkē","tuLoai":"danh từ","nghia":"bậc đại học; hệ cử nhân","viDu":"除了读本科课程，他们还可以申请读硕士研究生或者博士研究生。"},{"id":"v010","bai":7,"tu":"笔","pinyin":"bǐ","tuLoai":"danh từ","nghia":"bút","viDu":"我买了一支新笔。"},{"id":"v011","bai":null,"tu":"毕业","pinyin":"bìyè","tuLoai":"động từ","nghia":"tốt nghiệp","viDu":"这个小区的环境真不错，不过我听说，附近有十几家公司，很多刚毕业的学生都租住在这里。"},{"id":"v012","bai":null,"tu":"便于","pinyin":"biànyú","tuLoai":"động từ","nghia":"thuận tiện cho","viDu":"随文出现，便于学习者及时掌握。"},{"id":"v013","bai":null,"tu":"表","pinyin":"biǎo","tuLoai":"danh từ","nghia":"bảng; biểu; đồng hồ","viDu":"请把个人信息填在这张表里。"},{"id":"v014","bai":null,"tu":"表现","pinyin":"biǎoxiàn","tuLoai":"động từ","nghia":"biểu hiện; thể hiện","viDu":"我觉得球员们踢得很精彩，尤其是8号，表现特别好。"},{"id":"v015","bai":null,"tu":"并","pinyin":"bìng","tuLoai":"liên từ/trạng từ","nghia":"và; đồng thời; hoàn toàn","viDu":"这件事并不难。"},{"id":"v016","bai":1,"tu":"博士","pinyin":"bóshì","tuLoai":"danh từ","nghia":"tiến sĩ","viDu":"除了读本科课程，他们还可以申请读硕士研究生或者博士研究生。"},{"id":"v017","bai":5,"tu":"不够","pinyin":"búgòu","tuLoai":"tính từ","nghia":"không đủ","viDu":"他最近经常熬夜，休息不够，工作效率也下降了。"},{"id":"v018","bai":2,"tu":"不过","pinyin":"búguò","tuLoai":"liên từ","nghia":"nhưng; tuy nhiên","viDu":"思，不过很多中文地名我还不认识。"},{"id":"v019","bai":8,"tu":"不管","pinyin":"bùguǎn","tuLoai":"liên từ","nghia":"bất kể","viDu":"在我看来，不管去哪里玩，实际上都是为了放松。"},{"id":"v020","bai":3,"tu":"不仅","pinyin":"bùjǐn","tuLoai":"liên từ","nghia":"không những","viDu":"现在我不仅会扫码结账，还会用手机在网上购物了。"},{"id":"v021","bai":null,"tu":"步","pinyin":"bù","tuLoai":"danh từ/lượng từ","nghia":"bước","viDu":"他向前走了几步。"},{"id":"v022","bai":8,"tu":"部","pinyin":"bù","tuLoai":"lượng từ","nghia":"bộ; chiếc (máy móc, phim)","viDu":"我昨天看了一部电影。"},{"id":"v023","bai":1,"tu":"材料","pinyin":"cáiliào","tuLoai":"danh từ","nghia":"tài liệu; vật liệu","viDu":"这是我们的证件和材料。"},{"id":"v024","bai":null,"tu":"采访","pinyin":"cǎifǎng","tuLoai":"động từ","nghia":"phỏng vấn","viDu":"这次出差，我要采访几位客户。"},{"id":"v025","bai":null,"tu":"参观","pinyin":"cānguān","tuLoai":"động từ","nghia":"tham quan","viDu":"外出游玩时，你喜欢看风景还是参观历史文化景点?"},{"id":"v026","bai":10,"tu":"差别","pinyin":"chābié","tuLoai":"danh từ","nghia":"sự khác biệt","viDu":"就是呢，冬天北方和南方的温度差别还是很大的。"},{"id":"v027","bai":2,"tu":"查看","pinyin":"chákàn","tuLoai":"động từ","nghia":"kiểm tra; xem xét","viDu":"在小区里，白家月和李文继续查看周围环境。"},{"id":"v028","bai":null,"tu":"查找","pinyin":"cházhǎo","tuLoai":"động từ","nghia":"tìm kiếm","viDu":"她在网上查找到一条出租信息。"},{"id":"v029","bai":null,"tu":"产品","pinyin":"chǎnpǐn","tuLoai":"danh từ","nghia":"sản phẩm","viDu":"有的客户觉得价格有点儿高，有的客户更关心产品好用不好用。"},{"id":"v030","bai":null,"tu":"产生","pinyin":"chǎnshēng","tuLoai":"động từ","nghia":"sản sinh; phát sinh","viDu":"杨同乐和王一飞认识后，很聊得来，两人之间慢慢产生了爱情，最后成了夫妻。"},{"id":"v031","bai":null,"tu":"成为","pinyin":"chéngwéi","tuLoai":"động từ","nghia":"trở thành","viDu":"未来我们还将持续开发线上课程，让小语成为您教中文、学中文的好助手。"},{"id":"v032","bai":4,"tu":"乘客","pinyin":"chéngkè","tuLoai":"danh từ","nghia":"hành khách","viDu":"有的地铁站里有鲜花店，乘客下班时可以顺便买花送给家人。"},{"id":"v033","bai":null,"tu":"乘坐","pinyin":"chéngzuò","tuLoai":"động từ","nghia":"đi bằng; lên (phương tiện)","viDu":"距离短时可以走路或者骑自行车，距离长时多乘坐公交车或者地铁。"},{"id":"v034","bai":4,"tu":"充电","pinyin":"chōngdiàn","tuLoai":"động từ","nghia":"sạc điện","viDu":"电动车速度快，价格不高，充电也很方便，所以越来越流行。"},{"id":"v035","bai":null,"tu":"出差","pinyin":"chūchāi","tuLoai":"động từ","nghia":"đi công tác","viDu":"既然出差时间不长，就要安排好时间，多获得有用的信息。"},{"id":"v036","bai":4,"tu":"出行","pinyin":"chūxíng","tuLoai":"động từ","nghia":"đi lại; ra ngoài","viDu":"在城市里，人们出行的方式越来越多。"},{"id":"v037","bai":null,"tu":"出租","pinyin":"chūzū","tuLoai":"động từ","nghia":"cho thuê","viDu":"她在网上查找到一条出租信息。"},{"id":"v038","bai":2,"tu":"厨房","pinyin":"chúfáng","tuLoai":"danh từ","nghia":"nhà bếp","viDu":"厨房里有冰箱和一些做饭用的东西，不过，我平常主要在学校食堂吃，基本上不做饭。"},{"id":"v039","bai":9,"tu":"此","pinyin":"cǐ","tuLoai":"đại từ","nghia":"này; đây","viDu":"此事以后再谈。"},{"id":"v040","bai":null,"tu":"此外","pinyin":"cǐwài","tuLoai":"liên từ","nghia":"ngoài ra","viDu":"此外，新教程的主干课本在编写中突出交际情景化、结构简约化，同时借助数字手段使教材资源呈现立体化等特征。"},{"id":"v041","bai":9,"tu":"从此","pinyin":"cóngcǐ","tuLoai":"trạng từ","nghia":"từ đây; từ đó","viDu":"一起长大，，从此就慢慢失去了联系。"},{"id":"v042","bai":9,"tu":"从来","pinyin":"cónglái","tuLoai":"trạng từ","nghia":"từ trước đến nay","viDu":"爱，从来都是相互尊重、理解与支持,不是吗?"},{"id":"v043","bai":null,"tu":"错过","pinyin":"cuòguò","tuLoai":"động từ","nghia":"bỏ lỡ","viDu":"如果你没有一直找我聊天儿，我们可能就错过了。"},{"id":"v044","bai":5,"tu":"达到","pinyin":"dádào","tuLoai":"động từ","nghia":"đạt tới","viDu":"动词，表示数量上满足需要或者达到某个标准或程度。"},{"id":"v045","bai":7,"tu":"打扰","pinyin":"dǎrǎo","tuLoai":"động từ","nghia":"làm phiền","viDu":"经理，打扰您一下。"},{"id":"v046","bai":6,"tu":"打针","pinyin":"dǎzhēn","tuLoai":"động từ","nghia":"tiêm; chích","viDu":"医生说光吃药恐怕不够，打针会更有效。"},{"id":"v047","bai":null,"tu":"大厅","pinyin":"dàtīng","tuLoai":"danh từ","nghia":"đại sảnh","viDu":"家月，我去排队持号，你先在大厅休息，别着龟。"},{"id":"v048","bai":8,"tu":"大自然","pinyin":"dàzìrán","tuLoai":"danh từ","nghia":"thiên nhiên","viDu":"杨同乐周末常和朋友去郊区游玩，在大自然美丽的景色中放松自己。"},{"id":"v049","bai":null,"tu":"袋子","pinyin":"dàizi","tuLoai":"danh từ","nghia":"cái túi","viDu":"这几个袋子太重了，我自己拿吧。"},{"id":"v050","bai":null,"tu":"戴","pinyin":"dài","tuLoai":"động từ","nghia":"đeo; đội","viDu":"夏天出汗多，所以我一般不戴手表。"},{"id":"v051","bai":null,"tu":"当","pinyin":"dāng","tuLoai":"động từ","nghia":"làm; đảm nhiệm","viDu":"我毕业后想当老师。"},{"id":"v052","bai":null,"tu":"当时","pinyin":"dāngshí","tuLoai":"danh từ/trạng từ","nghia":"lúc đó","viDu":"实刚认识不久，你的幽默与耐心就很吸引我，不过我当时也只把你当普通朋友。"},{"id":"v053","bai":5,"tu":"倒","pinyin":"dào","tuLoai":"động từ","nghia":"đổ; rót","viDu":"请给我倒一杯水。"},{"id":"v054","bai":null,"tu":"道","pinyin":"dào","tuLoai":"lượng từ","nghia":"món; câu; đường","viDu":"晚饭我们点了四道菜。"},{"id":"v055","bai":null,"tu":"等","pinyin":"děng","tuLoai":"trợ từ","nghia":"vân vân","viDu":"我买了苹果、香蕉等水果。"},{"id":"v056","bai":null,"tu":"低","pinyin":"dī","tuLoai":"tính từ","nghia":"thấp","viDu":"这里冬天的气温很低。"},{"id":"v057","bai":null,"tu":"低于","pinyin":"dīyú","tuLoai":"động từ","nghia":"thấp hơn","viDu":"今天的气温低于零度。"},{"id":"v058","bai":6,"tu":"地址","pinyin":"dìzhǐ","tuLoai":"danh từ","nghia":"địa chỉ","viDu":"请在这张表上写上病人的姓名、性别、国籍、年龄、电话与码和家庭地址。"},{"id":"v059","bai":null,"tu":"点","pinyin":"diǎn","tuLoai":"danh từ","nghia":"điểm; chấm","viDu":"请在地图上标出这个点。"},{"id":"v060","bai":4,"tu":"电动车","pinyin":"diàndòngchē","tuLoai":"danh từ","nghia":"xe điện","viDu":"骑电动车，我早上就不用太早出发了。"},{"id":"v061","bai":7,"tu":"调查","pinyin":"diàochá","tuLoai":"động từ","nghia":"điều tra; khảo sát","viDu":"市场调查的计划书我昨天发到您邮箱了。"},{"id":"v062","bai":3,"tu":"订","pinyin":"dìng","tuLoai":"động từ","nghia":"đặt; đăng ký","viDu":"我昨天在网上订了一台电脑。"},{"id":"v063","bai":null,"tu":"冻","pinyin":"dòng","tuLoai":"động từ/tính từ","nghia":"đông lạnh; rét cóng","viDu":"哈尔滨太冷了，把这个小伙子冻坏了。"},{"id":"v064","bai":5,"tu":"肚子","pinyin":"dùzi","tuLoai":"danh từ","nghia":"bụng","viDu":"我肚子不舒服，想去医院看看。"},{"id":"v065","bai":null,"tu":"度","pinyin":"dù","tuLoai":"danh từ/lượng từ","nghia":"độ; mức độ","viDu":"今天的气温是二十度。"},{"id":"v066","bai":9,"tu":"对方","pinyin":"duìfāng","tuLoai":"danh từ","nghia":"đối phương; phía bên kia","viDu":"我跟发视频的人联系了一下，对方马上向我要了妈妈的微信号。"},{"id":"v067","bai":2,"tu":"而","pinyin":"ér","tuLoai":"liên từ","nghia":"mà; còn; và","viDu":"这个城市因为天气暖和而吸引了很多游客。"},{"id":"v068","bai":3,"tu":"法律","pinyin":"fǎlǜ","tuLoai":"danh từ","nghia":"pháp luật","viDu":"中国有保护个人信息的法律。"},{"id":"v069","bai":6,"tu":"翻译","pinyin":"fānyì","tuLoai":"động từ/danh từ","nghia":"dịch; phiên dịch","viDu":"去医院时，我请朋友帮我翻译。"},{"id":"v070","bai":1,"tu":"方面","pinyin":"fāngmiàn","tuLoai":"danh từ","nghia":"phương diện","viDu":"更多国际贸易方面的知识。"},{"id":"v071","bai":4,"tu":"方式","pinyin":"fāngshì","tuLoai":"danh từ","nghia":"phương thức","viDu":"解公司的管理方式，学会和同事有效交流，等等。"},{"id":"v072","bai":null,"tu":"方言","pinyin":"fāngyán","tuLoai":"danh từ","nghia":"phương ngữ","viDu":"如果只使用方言，交流就会很困难，甚至可能引起误会。"},{"id":"v073","bai":2,"tu":"房东","pinyin":"fángdōng","tuLoai":"danh từ","nghia":"chủ nhà","viDu":"李文和白家月到房东家看房子。"},{"id":"v074","bai":6,"tu":"房租","pinyin":"fángzū","tuLoai":"danh từ","nghia":"tiền thuê nhà","viDu":"房东说，小张要租的房子不太大，，房租不高，位置也比较好。"},{"id":"v075","bai":8,"tu":"放松","pinyin":"fàngsōng","tuLoai":"động từ","nghia":"thư giãn","viDu":"不管去哪儿，能放松的地方都行。"},{"id":"v076","bai":null,"tu":"费","pinyin":"fèi","tuLoai":"động từ/danh từ","nghia":"tốn; phí","viDu":"我忘了交电话费，手机停机了。"},{"id":"v077","bai":10,"tu":"分类","pinyin":"fēnlèi","tuLoai":"động từ/danh từ","nghia":"phân loại","viDu":"为了保护环境，我们学校每年都垃圾分类活动。"},{"id":"v078","bai":null,"tu":"份","pinyin":"fèn","tuLoai":"lượng từ","nghia":"phần; suất; bản","viDu":"请给我一份调查报告。"},{"id":"v079","bai":8,"tu":"风景","pinyin":"fēngjǐng","tuLoai":"danh từ","nghia":"phong cảnh","viDu":"是的，现在我周末常来郊区，在好山好水好风景中放松自己。"},{"id":"v080","bai":null,"tu":"否则","pinyin":"fǒuzé","tuLoai":"liên từ","nghia":"nếu không thì","viDu":"还是别给自己太大压力，否则，失去健康就不值得了。"},{"id":"v081","bai":3,"tu":"付","pinyin":"fù","tuLoai":"động từ","nghia":"trả; thanh toán","viDu":"我们可以用手机付钱。"},{"id":"v082","bai":null,"tu":"负责","pinyin":"fùzé","tuLoai":"động từ/tính từ","nghia":"phụ trách; có trách nhiệm","viDu":"他工作认真负责，表现也很积极。"},{"id":"v083","bai":null,"tu":"改","pinyin":"gǎi","tuLoai":"động từ","nghia":"sửa; thay đổi","viDu":"请把这个错误改一下。"},{"id":"v084","bai":3,"tu":"改变","pinyin":"gǎibiàn","tuLoai":"động từ","nghia":"thay đổi","viDu":"因此，很多人开始做出改变，提醒自己减轻压力、多多放松。"},{"id":"v085","bai":6,"tu":"赶快","pinyin":"gǎnkuài","tuLoai":"trạng từ","nghia":"mau lên; nhanh chóng","viDu":"那咱们赶快多接点儿水，做不了饭了。"},{"id":"v086","bai":null,"tu":"敢","pinyin":"gǎn","tuLoai":"động từ năng nguyện","nghia":"dám","viDu":"你敢一个人看这个电影吗？"},{"id":"v087","bai":null,"tu":"感","pinyin":"gǎn","tuLoai":"danh từ","nghia":"cảm giác; cảm nhận","viDu":"这部电影很有时代感。"},{"id":"v088","bai":9,"tu":"感动","pinyin":"gǎndòng","tuLoai":"động từ/tính từ","nghia":"cảm động","viDu":"我记得第一次看这个电影时，我都感动得灵了。"},{"id":"v089","bai":6,"tu":"感觉","pinyin":"gǎnjué","tuLoai":"động từ/danh từ","nghia":"cảm thấy; cảm giác","viDu":"杨同乐为什么感觉自己很幸运?"},{"id":"v090","bai":9,"tu":"感情","pinyin":"gǎnqíng","tuLoai":"danh từ","nghia":"tình cảm","viDu":"他们夫妻两人的感情一直特别好。"},{"id":"v091","bai":9,"tu":"感受","pinyin":"gǎnshòu","tuLoai":"động từ/danh từ","nghia":"cảm nhận","viDu":"在一筑不情中，两个人恨关注对方的感受，尤其是结婚后，更要共同经营好家庭，卓子才能越过越好。"},{"id":"v092","bai":4,"tu":"感谢","pinyin":"gǎnxiè","tuLoai":"động từ","nghia":"cảm ơn","viDu":"她感谢大家这段时间对自己的照顾。"},{"id":"v093","bai":3,"tu":"个人","pinyin":"gèrén","tuLoai":"danh từ/tính từ","nghia":"cá nhân; riêng tư","viDu":"保护环境是每一个人的责任。"},{"id":"v094","bai":null,"tu":"各","pinyin":"gè","tuLoai":"đại từ","nghia":"mỗi; các","viDu":"大家觉得还是各付各的更合适。"},{"id":"v095","bai":3,"tu":"各种","pinyin":"gèzhǒng","tuLoai":"đại từ","nghia":"các loại","viDu":"而且我喜欢看花，听说广州的鲜花市场很有有名，里面有各种植物。"},{"id":"v096","bai":4,"tu":"更加","pinyin":"gèngjiā","tuLoai":"trạng từ","nghia":"càng thêm","viDu":"这个新方法使工作变得更加简单了。"},{"id":"v097","bai":null,"tu":"工资","pinyin":"gōngzī","tuLoai":"danh từ","nghia":"tiền lương","viDu":"他刚工作不久，工资还不太高。"},{"id":"v098","bai":10,"tu":"公里","pinyin":"gōnglǐ","tuLoai":"lượng từ","nghia":"kilômét","viDu":"北京离这里有三千多公里。"},{"id":"v099","bai":9,"tu":"共同","pinyin":"gòngtóng","tuLoai":"tính từ/trạng từ","nghia":"chung; cùng nhau","viDu":"嗯，他们尽管性格不同，但是有很多共同爱好。"},{"id":"v100","bai":1,"tu":"购买","pinyin":"gòumǎi","tuLoai":"động từ","nghia":"mua","viDu":"在中国，乘客可以在不少地铁(站里直接扫码购买食物和饮料，有的地铁站还提供免费借雨企、发雨衣等服务。"},{"id":"v101","bai":3,"tu":"购物","pinyin":"gòuwù","tuLoai":"động từ","nghia":"mua sắm","viDu":"现在我不仅会扫码结账，还会用手机在网上购物了。"},{"id":"v102","bai":5,"tu":"够","pinyin":"gòu","tuLoai":"động từ/tính từ","nghia":"đủ","viDu":"这些菜已经够了。"},{"id":"v103","bai":null,"tu":"挂号","pinyin":"guàhào","tuLoai":"động từ","nghia":"đăng ký khám; lấy số","viDu":"没问题，您拿着病人的护照去挂号吧。"},{"id":"v104","bai":null,"tu":"管","pinyin":"guǎn","tuLoai":"động từ","nghia":"quản; phụ trách","viDu":"这件事归他管。"},{"id":"v105","bai":7,"tu":"管理","pinyin":"guǎnlǐ","tuLoai":"động từ/danh từ","nghia":"quản lý","viDu":"解公司的管理方式，学会和同事有效交流，等等。"},{"id":"v106","bai":null,"tu":"光","pinyin":"guāng","tuLoai":"danh từ/trạng từ","nghia":"ánh sáng; chỉ","viDu":"早上的阳光很好。"},{"id":"v107","bai":null,"tu":"国籍","pinyin":"guójí","tuLoai":"danh từ","nghia":"quốc tịch","viDu":"请在这张表上写上病人的姓名、性别、国籍、年龄、电话与码和家庭地址。"},{"id":"v108","bai":1,"tu":"国际","pinyin":"guójì","tuLoai":"tính từ","nghia":"quốc tế","viDu":"有的医院有国际部，那里的医生一般会说英文，交流比较方便，但是国际部的收费比较高。"},{"id":"v109","bai":null,"tu":"过程","pinyin":"guòchéng","tuLoai":"danh từ","nghia":"quá trình","viDu":"新教程策划及编写过程中，得到了中外语言交流合作中心、汉考国际、外语教学与研究出版社以及业内许多专家学者的间力支持与专业指导。"},{"id":"v110","bai":10,"tu":"寒假","pinyin":"hánjià","tuLoai":"danh từ","nghia":"kỳ nghỉ đông","viDu":"寒假我打算去哈尔滨旅游。"},{"id":"v111","bai":null,"tu":"汗","pinyin":"hàn","tuLoai":"danh từ","nghia":"mồ hôi","viDu":"夏天很热，大家出了很多汗。"},{"id":"v112","bai":6,"tu":"好","pinyin":"hǎo","tuLoai":"trạng từ","nghia":"khá; rất","viDu":"今天好冷啊！"},{"id":"v113","bai":null,"tu":"后悔","pinyin":"hòuhuǐ","tuLoai":"động từ","nghia":"hối hận","viDu":"我很后悔上次没参加这个活动，这次怎么着也得去。"},{"id":"v114","bai":10,"tu":"厚","pinyin":"hòu","tuLoai":"tính từ","nghia":"dày","viDu":"天气很冷，你要穿厚一点儿。"},{"id":"v115","bai":4,"tu":"互相","pinyin":"hùxiāng","tuLoai":"trạng từ","nghia":"lẫn nhau","viDu":"同学应该互相帮助、互相学习。"},{"id":"v116","bai":6,"tu":"护士","pinyin":"hùshi","tuLoai":"danh từ","nghia":"y tá","viDu":"第一次在中国的医院看病，可以先问护士应该怎么做。"},{"id":"v117","bai":10,"tu":"环保","pinyin":"huánbǎo","tuLoai":"danh từ/tính từ","nghia":"bảo vệ môi trường; thân thiện môi trường","viDu":"一、绿色出行绿色一小步，环保一大步。"},{"id":"v118","bai":1,"tu":"活动","pinyin":"huódòng","tuLoai":"danh từ/động từ","nghia":"hoạt động","viDu":"你就跟我们一起参加活动吧。"},{"id":"v119","bai":null,"tu":"货","pinyin":"huò","tuLoai":"danh từ","nghia":"hàng hóa","viDu":"这些货今天下午能送到吗？"},{"id":"v120","bai":1,"tu":"获得","pinyin":"huòdé","tuLoai":"động từ","nghia":"giành được; đạt được","viDu":"由于大家的努力，这次运动会我们班获得了第一名。"},{"id":"v121","bai":null,"tu":"积极","pinyin":"jījí","tuLoai":"tính từ","nghia":"tích cực","viDu":"积极参加校园、小区环保活动，学习垃圾分类知识，从小事做起，做好垃圾分类。"},{"id":"v122","bai":7,"tu":"积累","pinyin":"jīlěi","tuLoai":"động từ","nghia":"tích lũy","viDu":"以前杨同乐总觉得自己年轻，就应该多学多干、积累经验。"},{"id":"v123","bai":2,"tu":"基本上","pinyin":"jīběnshàng","tuLoai":"trạng từ","nghia":"về cơ bản","viDu":"北京大是大，不过这边的路基本上都是正南正北、正东正西的，很好找。"},{"id":"v124","bai":7,"tu":"基础","pinyin":"jīchǔ","tuLoai":"danh từ","nghia":"nền tảng; cơ sở","viDu":"些基础打好，提高工作能力，今后才会有更好的发展机会。"},{"id":"v125","bai":null,"tu":"及时","pinyin":"jíshí","tuLoai":"tính từ/trạng từ","nghia":"kịp thời","viDu":"随文出现，便于学习者及时掌握。"},{"id":"v126","bai":7,"tu":"计划","pinyin":"jìhuà","tuLoai":"danh từ/động từ","nghia":"kế hoạch; lên kế hoạch","viDu":"市场调查的计划书我昨天发到您邮箱了。"},{"id":"v127","bai":null,"tu":"技术","pinyin":"jìshù","tuLoai":"danh từ","nghia":"kỹ thuật; công nghệ","viDu":"当前，新一轮科技革命与产业变革加速演进，人工智能等新技术正在重塑教育形态，对人才需求产生深远影响。"},{"id":"v128","bai":null,"tu":"既","pinyin":"jì","tuLoai":"liên từ","nghia":"đã; vừa (trong cấu trúc 既…又…)","viDu":"这家饭馆的菜既好吃，又便宜。"},{"id":"v129","bai":7,"tu":"既然","pinyin":"jìrán","tuLoai":"liên từ","nghia":"đã; nếu đã","viDu":"既然出差时间不长，就要安排好时间，多获得有用的信息。"},{"id":"v130","bai":null,"tu":"寄","pinyin":"jì","tuLoai":"động từ","nghia":"gửi","viDu":"我上午寄出的快递，下午就送到了。"},{"id":"v131","bai":8,"tu":"加班","pinyin":"jiābān","tuLoai":"động từ","nghia":"làm thêm giờ","viDu":"降，健康也受到了影响现在越来越多的人认识到，跟一直加班相比，休息好了再工作，效率更高。"},{"id":"v132","bai":null,"tu":"加油","pinyin":"jiāyóu","tuLoai":"động từ","nghia":"cố lên; đổ xăng","viDu":"没错，我们一起加油吧!"},{"id":"v133","bai":6,"tu":"家庭","pinyin":"jiātíng","tuLoai":"danh từ","nghia":"gia đình","viDu":"在一筑不情中，两个人恨关注对方的感受，尤其是结婚后，更要共同经营好家庭，卓子才能越过越好。"},{"id":"v134","bai":2,"tu":"价格","pinyin":"jiàgé","tuLoai":"danh từ","nghia":"giá cả","viDu":"电动车速度快，价格不高，充电也很方便，所以越来越流行。"},{"id":"v135","bai":9,"tu":"间","pinyin":"jiān","tuLoai":"lượng từ","nghia":"gian; phòng","viDu":"我在学校附近租了一间房。"},{"id":"v136","bai":null,"tu":"减轻","pinyin":"jiǎnqīng","tuLoai":"động từ","nghia":"giảm nhẹ","viDu":"多做运动一方面能让身体更健康，另一方面也能减轻压力。"},{"id":"v137","bai":2,"tu":"建议","pinyin":"jiànyì","tuLoai":"động từ/danh từ","nghia":"đề nghị; kiến nghị","viDu":"接着，房东又建议小张过去看看。"},{"id":"v138","bai":1,"tu":"将来","pinyin":"jiānglái","tuLoai":"danh từ","nghia":"tương lai","viDu":"有人对经济感兴趣，希望将来在国际公司工作。"},{"id":"v139","bai":1,"tu":"奖学金","pinyin":"jiǎngxuéjīn","tuLoai":"danh từ","nghia":"học bổng","viDu":"能介绍办理入学手续、申请奖学金等信息。"},{"id":"v140","bai":8,"tu":"降","pinyin":"jiàng","tuLoai":"động từ","nghia":"hạ; giảm","viDu":"医生说要先把体温降下来。"},{"id":"v141","bai":null,"tu":"交","pinyin":"jiāo","tuLoai":"động từ","nghia":"nộp; giao; kết bạn","viDu":"请把调查结果交给经理。"},{"id":"v142","bai":1,"tu":"交流","pinyin":"jiāoliú","tuLoai":"động từ/danh từ","nghia":"giao lưu; trao đổi","viDu":"她和一些客户交流了一下。"},{"id":"v143","bai":1,"tu":"交通","pinyin":"jiāotōng","tuLoai":"danh từ","nghia":"giao thông","viDu":"北京交通很方便，所以我和家人更爱乘坐公交车去郊区，偶尔也会自己开车。"},{"id":"v144","bai":null,"tu":"郊区","pinyin":"jiāoqū","tuLoai":"danh từ","nghia":"ngoại ô","viDu":"是的，现在我周末常来郊区，在好山好水好风景中放松自己。"},{"id":"v145","bai":10,"tu":"较","pinyin":"jiào","tuLoai":"trạng từ","nghia":"tương đối; khá","viDu":"这个办法较简单。"},{"id":"v146","bai":1,"tu":"教师","pinyin":"jiàoshī","tuLoai":"danh từ","nghia":"giáo viên","viDu":"教师可灵活安排，或课上完成，或布置为课后作业。"},{"id":"v147","bai":null,"tu":"教育","pinyin":"jiàoyù","tuLoai":"danh từ/động từ","nghia":"giáo dục","viDu":"当前，新一轮科技革命与产业变革加速演进，人工智能等新技术正在重塑教育形态，对人才需求产生深远影响。"},{"id":"v148","bai":2,"tu":"接着","pinyin":"jiēzhe","tuLoai":"trạng từ/liên từ","nghia":"tiếp theo; sau đó","viDu":"接着，房东又建议小张过去看看。"},{"id":"v149","bai":10,"tu":"节约","pinyin":"jiéyuē","tuLoai":"động từ","nghia":"tiết kiệm","viDu":"二、拒绝浪费节约资源，坚持一水多用、人走灯关、餐餐都“光盘”。"},{"id":"v150","bai":6,"tu":"结果","pinyin":"jiéguǒ","tuLoai":"danh từ/liên từ","nghia":"kết quả; rốt cuộc","viDu":"前一分句是可能性条件，后一分句表示结果不会变。"},{"id":"v151","bai":3,"tu":"结账","pinyin":"jiézhàng","tuLoai":"động từ","nghia":"thanh toán","viDu":"现在我不仅会扫码结账，还会用手机在网上购物了。"},{"id":"v152","bai":null,"tu":"今后","pinyin":"jīnhòu","tuLoai":"danh từ/trạng từ","nghia":"từ nay về sau","viDu":"些基础打好，提高工作能力，今后才会有更好的发展机会。"},{"id":"v153","bai":9,"tu":"尽管","pinyin":"jǐnguǎn","tuLoai":"liên từ","nghia":"mặc dù; cứ việc","viDu":"他们尽管性格不同，但是有很多共同爱好。"},{"id":"v154","bai":8,"tu":"紧张","pinyin":"jǐnzhāng","tuLoai":"tính từ","nghia":"căng thẳng","viDu":"家月，最近学习太紧张了，咱们明天出去放松放松吧。"},{"id":"v155","bai":null,"tu":"进入","pinyin":"jìnrù","tuLoai":"động từ","nghia":"đi vào","viDu":"王一雪比杨同乐更早进入公司。"},{"id":"v156","bai":3,"tu":"进行","pinyin":"jìnxíng","tuLoai":"động từ","nghia":"tiến hành","viDu":"前两天和李文喝咖啡时，他帮我下载了微信和支付宝，教我认识里边的汉字，还教我用手机进行支付。"},{"id":"v157","bai":1,"tu":"经济","pinyin":"jīngjì","tuLoai":"danh từ/tính từ","nghia":"kinh tế","viDu":"那太好了，委是申请到奖学金，就能减轻不少经济压力。"},{"id":"v158","bai":6,"tu":"经验","pinyin":"jīngyàn","tuLoai":"danh từ","nghia":"kinh nghiệm","viDu":"如果总是换工作，不但很难积累经验，还可能会使自己的发展受到影响。"},{"id":"v159","bai":9,"tu":"经营","pinyin":"jīngyíng","tuLoai":"động từ","nghia":"kinh doanh; vận hành","viDu":"只是爱的开始，爱更需要经营。"},{"id":"v160","bai":9,"tu":"精彩","pinyin":"jīngcǎi","tuLoai":"tính từ","nghia":"đặc sắc; tuyệt vời","viDu":"我觉得球员们踢得很精彩，尤其是8号，表现特别好。"},{"id":"v161","bai":8,"tu":"景点","pinyin":"jǐngdiǎn","tuLoai":"danh từ","nghia":"điểm tham quan","viDu":"外出游玩时，你喜欢看风景还是参观历史文化景点?"},{"id":"v162","bai":10,"tu":"景色","pinyin":"jǐngsè","tuLoai":"danh từ","nghia":"cảnh sắc","viDu":"杨同乐周末常和朋友去郊区游玩，在大自然美丽的景色中放松自己。"},{"id":"v163","bai":null,"tu":"就是","pinyin":"jiùshì","tuLoai":"trạng từ","nghia":"chính là; cứ","viDu":"如果决定租了，告诉我就是了。"},{"id":"v164","bai":10,"tu":"举办","pinyin":"jǔbàn","tuLoai":"động từ","nghia":"tổ chức","viDu":"我去哈尔滨主要是想看雪，听说春节时那里会举办很多活动。"},{"id":"v165","bai":null,"tu":"拒绝","pinyin":"jùjué","tuLoai":"động từ","nghia":"từ chối","viDu":"二、拒绝浪费节约资源，坚持一水多用、人走灯关、餐餐都“光盘”。"},{"id":"v166","bai":4,"tu":"距离","pinyin":"jùlí","tuLoai":"danh từ/động từ","nghia":"khoảng cách; cách","viDu":"距离短时可以走路或者骑自行车，距离长时多乘坐公交车或者地铁。"},{"id":"v167","bai":null,"tu":"聚","pinyin":"jù","tuLoai":"động từ","nghia":"tụ họp","viDu":"周末，我们聚在一起吃午餐。"},{"id":"v168","bai":null,"tu":"聚餐","pinyin":"jùcān","tuLoai":"động từ","nghia":"ăn uống tụ họp","viDu":"如果有聚餐时有老人人，年轻人要等老人坐下后再坐。"},{"id":"v169","bai":10,"tu":"开展","pinyin":"kāizhǎn","tuLoai":"động từ","nghia":"triển khai; tiến hành","viDu":"中文承载着中华民族数千年的文明智慧，是中国贡献给世界的重要公共文化产品，支持服务国际社会开展好中文教育是中国作为母语国的责任。"},{"id":"v170","bai":7,"tu":"看法","pinyin":"kànfǎ","tuLoai":"danh từ","nghia":"cách nhìn; ý kiến","viDu":"各组先准备自己的观点和理由，然后进行辩论，表达自己的看法。"},{"id":"v171","bai":6,"tu":"咳","pinyin":"ké","tuLoai":"động từ","nghia":"ho","viDu":"他感冒了，一直咳。"},{"id":"v172","bai":6,"tu":"咳嗽","pinyin":"késou","tuLoai":"động từ/danh từ","nghia":"ho; cơn ho","viDu":"对，我还发烧，一直咳嗽，咳得很厉害。"},{"id":"v173","bai":7,"tu":"客户","pinyin":"kèhù","tuLoai":"danh từ","nghia":"khách hàng","viDu":"她和一些客户交流了一下。"},{"id":"v174","bai":null,"tu":"客气","pinyin":"kèqi","tuLoai":"tính từ","nghia":"khách sáo; lịch sự","viDu":"你跟我有什么好客气的。"},{"id":"v175","bai":2,"tu":"客厅","pinyin":"kètīng","tuLoai":"danh từ","nghia":"phòng khách","viDu":"客厅里有椅子、沙发，还有一台大电视。"},{"id":"v176","bai":1,"tu":"课程","pinyin":"kèchéng","tuLoai":"danh từ","nghia":"khóa học; môn học","viDu":"我很喜欢这门课程，既能提高中文水平，也能学到历史知识。"},{"id":"v177","bai":null,"tu":"恐怕","pinyin":"kǒngpà","tuLoai":"phó từ","nghia":"e rằng; có lẽ","viDu":"恐怕今天来不及完成了。"},{"id":"v178","bai":3,"tu":"快递","pinyin":"kuàidì","tuLoai":"danh từ","nghia":"chuyển phát nhanh; bưu kiện","viDu":"在李文的帮助下，白家月和陈天中也都学会了用手机支付、网购、-一,寄快递等等。"},{"id":"v179","bai":7,"tu":"困难","pinyin":"kùnnan","tuLoai":"danh từ/tính từ","nghia":"khó khăn","viDu":"不管遇到多大困难，我们都要坚持。"},{"id":"v180","bai":10,"tu":"垃圾","pinyin":"lājī","tuLoai":"danh từ","nghia":"rác","viDu":"为了保护环境，我们学校每年都垃圾分类活动。"},{"id":"v181","bai":5,"tu":"辣","pinyin":"là","tuLoai":"tính từ","nghia":"cay","viDu":"这道菜太辣了，我吃不了。"},{"id":"v182","bai":null,"tu":"辣椒","pinyin":"làjiāo","tuLoai":"danh từ","nghia":"ớt","viDu":"这道菜放了很多辣椒。"},{"id":"v183","bai":4,"tu":"来不及","pinyin":"láibují","tuLoai":"động từ","nghia":"không kịp","viDu":"你现在才告诉我，我来不及通知大家了。"},{"id":"v184","bai":4,"tu":"来得及","pinyin":"láidejí","tuLoai":"động từ","nghia":"kịp","viDu":"没来得及吃早饭的人在这里就能买到热包子和牛奶等。"},{"id":"v185","bai":10,"tu":"浪费","pinyin":"làngfèi","tuLoai":"động từ","nghia":"lãng phí","viDu":"二、拒绝浪费节约资源，坚持一水多用、人走灯关、餐餐都“光盘”。"},{"id":"v186","bai":9,"tu":"浪漫","pinyin":"làngmàn","tuLoai":"tính từ","nghia":"lãng mạn","viDu":"他们的爱情故事很浪漫。"},{"id":"v187","bai":9,"tu":"理解","pinyin":"lǐjiě","tuLoai":"động từ","nghia":"hiểu; thông cảm","viDu":"后边的路还很长，希望他们能一直相互理解、相互支持。"},{"id":"v188","bai":2,"tu":"理想","pinyin":"lǐxiǎng","tuLoai":"danh từ/tính từ","nghia":"lý tưởng","viDu":"她看了好几个房子，才找到一个位置、环境和价格都合适的，最后顺利租到了理想的房子。"},{"id":"v189","bai":4,"tu":"力气","pinyin":"lìqi","tuLoai":"danh từ","nghia":"sức lực","viDu":"这次地病得很厉害，头也一直疫，身上一点儿力气都没有。"},{"id":"v190","bai":null,"tu":"厉害","pinyin":"lìhai","tuLoai":"tính từ","nghia":"lợi hại; nghiêm trọng","viDu":"这次地病得很厉害，头也一直疫，身上一点儿力气都没有。"},{"id":"v191","bai":4,"tu":"联系","pinyin":"liánxì","tuLoai":"động từ/danh từ","nghia":"liên hệ","viDu":"我把电话号码告诉你，以后有什么事好联系我。"},{"id":"v192","bai":null,"tu":"凉","pinyin":"liáng","tuLoai":"tính từ","nghia":"mát; nguội","viDu":"天气凉了，出门多穿一件衣服。"},{"id":"v193","bai":null,"tu":"亮","pinyin":"liàng","tuLoai":"tính từ","nghia":"sáng","viDu":"客厅里很亮。"},{"id":"v194","bai":null,"tu":"零下","pinyin":"língxià","tuLoai":"danh từ","nghia":"dưới 0 độ","viDu":"北京那天只有零下五，你们还是去了长城?"},{"id":"v195","bai":null,"tu":"另","pinyin":"lìng","tuLoai":"đại từ","nghia":"khác; một… khác","viDu":"我们另找一个时间吧。"},{"id":"v196","bai":4,"tu":"流行","pinyin":"liúxíng","tuLoai":"động từ/tính từ","nghia":"thịnh hành","viDu":"医生给她做了检查，检查结果出来后，发现地得了比较严重的流行性感冒。"},{"id":"v197","bai":10,"tu":"绿色","pinyin":"lǜsè","tuLoai":"danh từ/tính từ","nghia":"màu xanh lá; xanh","viDu":"一、绿色出行绿色一小步，环保一大步。"},{"id":"v198","bai":3,"tu":"乱","pinyin":"luàn","tuLoai":"tính từ/trạng từ","nghia":"lộn xộn; bừa bãi","viDu":"网购太方便，也容易让人乱花钱。"},{"id":"v199","bai":2,"tu":"毛巾","pinyin":"máojīn","tuLoai":"danh từ","nghia":"khăn mặt","viDu":"看完整个房子后，我准备再去买几条和毛巾，其他东西还不需要。"},{"id":"v200","bai":1,"tu":"贸易","pinyin":"màoyì","tuLoai":"danh từ","nghia":"thương mại","viDu":"他毕业后想做国际贸易。"},{"id":"v201","bai":null,"tu":"帽子","pinyin":"màozi","tuLoai":"danh từ","nghia":"mũ","viDu":"外面很冷，别忘了戴帽子。"},{"id":"v202","bai":9,"tu":"美好","pinyin":"měihǎo","tuLoai":"tính từ","nghia":"tốt đẹp","viDu":"妈妈说，，但是她们还能联系上，而且美好的友情还在，她觉得很幸运。"},{"id":"v203","bai":8,"tu":"美景","pinyin":"měijǐng","tuLoai":"danh từ","nghia":"cảnh đẹp","viDu":"我们在贵州看到了很多美景。"},{"id":"v204","bai":null,"tu":"美丽","pinyin":"měilì","tuLoai":"tính từ","nghia":"xinh đẹp","viDu":"杨同乐周末常和朋友去郊区游玩，在大自然美丽的景色中放松自己。"},{"id":"v205","bai":3,"tu":"密码","pinyin":"mìmǎ","tuLoai":"danh từ","nghia":"mật khẩu","viDu":"不要把密码随便告诉别人。"},{"id":"v206","bai":null,"tu":"免费","pinyin":"miǎnfèi","tuLoai":"động từ/tính từ","nghia":"miễn phí","viDu":"在中国，乘客可以在不少地铁(站里直接扫码购买食物和饮料，有的地铁站还提供免费借雨企、发雨衣等服务。"},{"id":"v207","bai":5,"tu":"面对","pinyin":"miànduì","tuLoai":"động từ","nghia":"đối mặt","viDu":"安排，年龄比较大的客人往往会坐在中间或者面对门口的座位。"},{"id":"v208","bai":3,"tu":"目的地","pinyin":"mùdìdì","tuLoai":"danh từ","nghia":"điểm đến","viDu":"所以冬天来北方，尤其是东北，一定要提前查好目的地的天气，看看下不下雪，气温怎么样。"},{"id":"v209","bai":9,"tu":"耐心","pinyin":"nàixīn","tuLoai":"danh từ/tính từ","nghia":"kiên nhẫn","viDu":"尽管她已经很累了，可是还是很耐心地给女儿读睡前故事。"},{"id":"v210","bai":6,"tu":"难受","pinyin":"nánshòu","tuLoai":"tính từ","nghia":"khó chịu","viDu":"第二天醒来时，她感觉头不那么疼了，体温也低了一些，身体不那么难受了。"},{"id":"v211","bai":null,"tu":"内容","pinyin":"nèiróng","tuLoai":"danh từ","nghia":"nội dung","viDu":"小语的彩蛋是课文内容的延伸和补充。"},{"id":"v212","bai":3,"tu":"能否","pinyin":"néngfǒu","tuLoai":"động từ năng nguyện","nghia":"có thể hay không","viDu":"在提供信息时，我们会担心个人信息能否得到保护。"},{"id":"v213","bai":null,"tu":"能力","pinyin":"nénglì","tuLoai":"danh từ","nghia":"năng lực","viDu":"此人聪明、有了能力，一定能顺利完成任务。"},{"id":"v214","bai":null,"tu":"嗯","pinyin":"ǹg","tuLoai":"thán từ","nghia":"ừ; vâng","viDu":"嗯，我同意你的看法。"},{"id":"v215","bai":5,"tu":"年龄","pinyin":"niánlíng","tuLoai":"danh từ","nghia":"tuổi tác","viDu":"小张按照客户的年龄和性别写好了调查结果。"},{"id":"v216","bai":null,"tu":"暖和","pinyin":"nuǎnhuo","tuLoai":"tính từ","nghia":"ấm áp","viDu":"冬天，这个城市因为天气暖和而吸引了很多游客。"},{"id":"v217","bai":6,"tu":"偶尔","pinyin":"ǒu’ěr","tuLoai":"trạng từ","nghia":"thỉnh thoảng","viDu":"她告诉医生，自己平时身体不错，偶尔才会生一次病。"},{"id":"v218","bai":6,"tu":"排队","pinyin":"páiduì","tuLoai":"động từ","nghia":"xếp hàng","viDu":"家月，我去排队持号，你先在大厅休息，别着龟。"},{"id":"v219","bai":6,"tu":"陪","pinyin":"péi","tuLoai":"động từ","nghia":"đi cùng; ở bên","viDu":"有你陪着，我就放心多了。"},{"id":"v220","bai":2,"tu":"平常","pinyin":"píngcháng","tuLoai":"danh từ/trạng từ","nghia":"bình thường; thường ngày","viDu":"厨房里有冰箱和一些做饭用的东西，不过，我平常主要在学校食堂吃，基本上不做饭。"},{"id":"v221","bai":5,"tu":"普通","pinyin":"pǔtōng","tuLoai":"tính từ","nghia":"phổ thông; bình thường","viDu":"其实，中国很多地方都有自己的方言，所以，为了顺利交流，中国人从小都要学习普通话。"},{"id":"v222","bai":10,"tu":"普通话","pinyin":"pǔtōnghuà","tuLoai":"danh từ","nghia":"tiếng Phổ thông Trung Quốc","viDu":"其实，中国很多地方都有自己的方言，所以，为了顺利交流，中国人从小都要学习普通话。"},{"id":"v223","bai":null,"tu":"气候","pinyin":"qìhòu","tuLoai":"danh từ","nghia":"khí hậu","viDu":"除了气候，在南方城市的生活和北方没有很大差别，老人平时可以去家附近的公园活动活动。"},{"id":"v224","bai":10,"tu":"气温","pinyin":"qìwēn","tuLoai":"danh từ","nghia":"nhiệt độ không khí","viDu":"所以冬天来北方，尤其是东北，一定要提前查好目的地的天气，看看下不下雪，气温怎么样。"},{"id":"v225","bai":null,"tu":"签证","pinyin":"qiānzhèng","tuLoai":"danh từ","nghia":"thị thực","viDu":"她办好签证后就准备入学了。"},{"id":"v226","bai":9,"tu":"巧克力","pinyin":"qiǎokèlì","tuLoai":"danh từ","nghia":"sô-cô-la","viDu":"知道我喜欢这个巧克力?"},{"id":"v227","bai":10,"tu":"亲爱","pinyin":"qīn’ài","tuLoai":"tính từ","nghia":"thân yêu","viDu":"亲爱的同学们，大家好！"},{"id":"v228","bai":6,"tu":"情况","pinyin":"qíngkuàng","tuLoai":"danh từ","nghia":"tình hình","viDu":"医生会问病人的情况，有时还会做一些检查，好给出合适的治疗方法。"},{"id":"v229","bai":7,"tu":"缺点","pinyin":"quēdiǎn","tuLoai":"danh từ","nghia":"khuyết điểm","viDu":"他能把产品的优缺点说得很清楚。"},{"id":"v230","bai":2,"tu":"热闹","pinyin":"rènao","tuLoai":"tính từ","nghia":"náo nhiệt","viDu":"你今天正好有时间，再说人多也更热闹。"},{"id":"v231","bai":null,"tu":"人生","pinyin":"rénshēng","tuLoai":"danh từ","nghia":"cuộc đời","viDu":"李文在校园里遇见白家月，从此，他们的人生变得更加精彩。"},{"id":"v232","bai":1,"tu":"任何","pinyin":"rènhé","tuLoai":"đại từ","nghia":"bất kỳ","viDu":"你们以后有任何问题都可以来找我。"},{"id":"v233","bai":7,"tu":"任务","pinyin":"rènwu","tuLoai":"danh từ","nghia":"nhiệm vụ","viDu":"为此，新教程借鉴情景剧形式设计交际场景及交际任务，以一系列独立的情景剧单元组织内容。"},{"id":"v234","bai":null,"tu":"日常","pinyin":"rìcháng","tuLoai":"tính từ","nghia":"hằng ngày","viDu":"通过王一飞夫妇、王一雪和刘明一家以及普通中国人的日常生活、职场交往等故事，勾勒出当代中国人真实温暖的生活图景。"},{"id":"v235","bai":2,"tu":"日记","pinyin":"rìjì","tuLoai":"danh từ","nghia":"nhật ký","viDu":"搬进新家后，白家月很开心，写了一篇日记。"},{"id":"v236","bai":null,"tu":"日子","pinyin":"rìzi","tuLoai":"danh từ","nghia":"ngày tháng; cuộc sống","viDu":"我的想法和你一样，我也希望遇到简单的人，结婚后过简单的日子。"},{"id":"v237","bai":1,"tu":"入学","pinyin":"rùxué","tuLoai":"động từ","nghia":"nhập học","viDu":"能介绍办理入学手续、申请奖学金等信息。"},{"id":"v238","bai":2,"tu":"入住","pinyin":"rùzhù","tuLoai":"động từ","nghia":"nhận phòng; vào ở","viDu":"您好，办入住需要您身份证和手机号后四位。"},{"id":"v239","bai":3,"tu":"软件","pinyin":"ruǎnjiàn","tuLoai":"danh từ","nghia":"phần mềm","viDu":"李文帮陈天中下载了快递软件。"},{"id":"v240","bai":null,"tu":"扫码","pinyin":"sǎomǎ","tuLoai":"động từ","nghia":"quét mã","viDu":"现在我不仅会扫码结账，还会用手机在网上购物了。"},{"id":"v241","bai":7,"tu":"社会","pinyin":"shèhuì","tuLoai":"danh từ","nghia":"xã hội","viDu":"中文承载着中华民族数千年的文明智慧，是中国贡献给世界的重要公共文化产品，支持服务国际社会开展好中文教育是中国作为母语国的责任。"},{"id":"v242","bai":10,"tu":"摄氏度","pinyin":"shèshìdù","tuLoai":"danh từ/lượng từ","nghia":"độ C","viDu":"摄氏度甚至零下二十摄氏度，这么低的温度你受不了吧?"},{"id":"v243","bai":null,"tu":"申请","pinyin":"shēnqǐng","tuLoai":"động từ","nghia":"xin; đăng ký","viDu":"除了读本科课程，他们还可以申请读硕士研究生或者博士研究生。"},{"id":"v244","bai":6,"tu":"身","pinyin":"shēn","tuLoai":"lượng từ","nghia":"bộ (quần áo)","viDu":"他今天穿了一身新衣服。"},{"id":"v245","bai":3,"tu":"身份证","pinyin":"shēnfènzhèng","tuLoai":"danh từ","nghia":"chứng minh nhân dân; căn cước","viDu":"您好，办入住需要您身份证和手机号后四位。"},{"id":"v246","bai":9,"tu":"深","pinyin":"shēn","tuLoai":"tính từ","nghia":"sâu; đậm","viDu":"这条河很深。"},{"id":"v247","bai":3,"tu":"甚至","pinyin":"shènzhì","tuLoai":"trạng từ","nghia":"thậm chí","viDu":"只使用方言会让交流变得困难，甚至可能引起误会。"},{"id":"v248","bai":7,"tu":"生意","pinyin":"shēngyi","tuLoai":"danh từ","nghia":"việc kinh doanh","viDu":"前段时间，杨同乐的同事谈成了一笔不错的生意。"},{"id":"v249","bai":4,"tu":"省","pinyin":"shěng","tuLoai":"động từ","nghia":"tiết kiệm","viDu":"这样做既省钱又环保。"},{"id":"v250","bai":4,"tu":"剩","pinyin":"shèng","tuLoai":"động từ","nghia":"còn lại","viDu":"我先休息一会儿，再去拿剩下的东西。"},{"id":"v251","bai":8,"tu":"失去","pinyin":"shīqù","tuLoai":"động từ","nghia":"mất đi","viDu":"还是别给自己太大压力，否则，失去健康就不值得了。"},{"id":"v252","bai":null,"tu":"十分","pinyin":"shífēn","tuLoai":"trạng từ","nghia":"rất; vô cùng","viDu":"他今天是第一次参加比赛，所以十分。"},{"id":"v253","bai":3,"tu":"十字路口","pinyin":"shízì lùkǒu","tuLoai":"danh từ","nghia":"ngã tư","viDu":"你往前走，到十字路口直接右转。"},{"id":"v254","bai":7,"tu":"实际","pinyin":"shíjì","tuLoai":"danh từ/tính từ","nghia":"thực tế","viDu":"在我看来，不管去哪里玩，实际上都是为了放松。"},{"id":"v255","bai":8,"tu":"实际上","pinyin":"shíjìshàng","tuLoai":"trạng từ","nghia":"trên thực tế","viDu":"在我看来，不管去哪里玩，实际上都是为了放松。"},{"id":"v256","bai":9,"tu":"实在","pinyin":"shízài","tuLoai":"trạng từ/tính từ","nghia":"thật sự; thực","viDu":"那里太冷了，我实在那儿的气候。"},{"id":"v257","bai":1,"tu":"食堂","pinyin":"shítáng","tuLoai":"danh từ","nghia":"nhà ăn tập thể","viDu":"我一般都在学校食堂吃饭，偶尔会跟朋友一起出去吃。"},{"id":"v258","bai":4,"tu":"食物","pinyin":"shíwù","tuLoai":"danh từ","nghia":"thức ăn","viDu":"在中国，乘客可以在不少地铁(站里直接扫码购买食物和饮料，有的地铁站还提供免费借雨企、发雨衣等服务。"},{"id":"v259","bai":10,"tu":"使","pinyin":"shǐ","tuLoai":"động từ","nghia":"khiến; làm cho","viDu":"总是换工作可能会使自己的发展受到影响。"},{"id":"v260","bai":10,"tu":"使用","pinyin":"shǐyòng","tuLoai":"động từ","nghia":"sử dụng","viDu":"介词“跟”一般在口语中、不太正式的场合中使用。"},{"id":"v261","bai":7,"tu":"市场","pinyin":"shìchǎng","tuLoai":"danh từ","nghia":"thị trường; chợ","viDu":"这个市场特别大，有的是水果和菜，你想买什么菜都能买到。"},{"id":"v262","bai":8,"tu":"市区","pinyin":"shìqū","tuLoai":"danh từ","nghia":"khu vực nội thành","viDu":"他住在市区，交通很方便。"},{"id":"v263","bai":1,"tu":"适应","pinyin":"shìyìng","tuLoai":"động từ","nghia":"thích nghi","viDu":"我刚来北京时还不太习惯这里的天气，不过很快就适应了。"},{"id":"v264","bai":6,"tu":"收费","pinyin":"shōufèi","tuLoai":"động từ","nghia":"thu phí","viDu":"有的医院有国际部，那里的医生一般会说英文，交流比较方便，但是国际部的收费比较高。"},{"id":"v265","bai":2,"tu":"收拾","pinyin":"shōushi","tuLoai":"động từ","nghia":"thu dọn","viDu":"现在已经收拾好了，想租的话，今天就可以搬进来。"},{"id":"v266","bai":8,"tu":"手段","pinyin":"shǒuduàn","tuLoai":"danh từ","nghia":"biện pháp; thủ đoạn","viDu":"此外，新教程的主干课本在编写中突出交际情景化、结构简约化，同时借助数字手段使教材资源呈现立体化等特征。"},{"id":"v267","bai":3,"tu":"手指","pinyin":"shǒuzhǐ","tuLoai":"danh từ","nghia":"ngón tay","viDu":"动动手指就能在网上买东西。"},{"id":"v268","bai":8,"tu":"首都","pinyin":"shǒudū","tuLoai":"danh từ","nghia":"thủ đô","viDu":"我们到了北京首都机场。"},{"id":"v269","bai":10,"tu":"受不了","pinyin":"shòubuliǎo","tuLoai":"động từ","nghia":"không chịu nổi","viDu":"哈尔滨冬天太冷了，我可能受不了。"},{"id":"v270","bai":null,"tu":"熟","pinyin":"shú/shóu","tuLoai":"tính từ","nghia":"chín; quen","viDu":"我和他很熟。"},{"id":"v271","bai":null,"tu":"熟悉","pinyin":"shúxī","tuLoai":"động từ/tính từ","nghia":"quen thuộc","viDu":"我刚来中国，不熟悉路。"},{"id":"v272","bai":9,"tu":"顺便","pinyin":"shùnbiàn","tuLoai":"trạng từ","nghia":"tiện thể","viDu":"乘客下班时可以顺便买花送给家人。"},{"id":"v273","bai":null,"tu":"顺利","pinyin":"shùnlì","tuLoai":"tính từ/trạng từ","nghia":"thuận lợi","viDu":"此人聪明、有了能力，一定能顺利完成任务。"},{"id":"v274","bai":null,"tu":"顺序","pinyin":"shùnxù","tuLoai":"danh từ","nghia":"thứ tự","viDu":"一般来说，顺序是先挂号，然后去找医生看病。"},{"id":"v275","bai":1,"tu":"硕士","pinyin":"shuòshì","tuLoai":"danh từ","nghia":"thạc sĩ","viDu":"除了读本科课程，他们还可以申请读硕士研究生或者博士研究生。"},{"id":"v276","bai":4,"tu":"速度","pinyin":"sùdù","tuLoai":"danh từ","nghia":"tốc độ","viDu":"电动车速度快，价格不高，充电也很方便，所以越来越流行。"},{"id":"v277","bai":null,"tu":"酸","pinyin":"suān","tuLoai":"tính từ","nghia":"chua; đau mỏi","viDu":"这个汤有点儿酸。"},{"id":"v278","bai":4,"tu":"算","pinyin":"suàn","tuLoai":"động từ","nghia":"tính; coi như","viDu":"这个价格不算高。"},{"id":"v279","bai":3,"tu":"随便","pinyin":"suíbiàn","tuLoai":"tính từ/trạng từ","nghia":"tùy ý","viDu":"请坐，别客气，随便吃。"},{"id":"v280","bai":5,"tu":"随意","pinyin":"suíyì","tuLoai":"tính từ/trạng từ","nghia":"tùy ý; thoải mái","viDu":"这次聚餐比较随意。"},{"id":"v281","bai":1,"tu":"随着","pinyin":"suízhe","tuLoai":"giới từ","nghia":"cùng với; theo","viDu":"随着中国的发展，越来越多的外国学生来中国学习。"},{"id":"v282","bai":2,"tu":"台","pinyin":"tái","tuLoai":"lượng từ","nghia":"chiếc (máy móc)","viDu":"我在网上订了一台电脑。"},{"id":"v283","bai":7,"tu":"谈","pinyin":"tán","tuLoai":"động từ","nghia":"nói chuyện; bàn bạc","viDu":"我想跟你谈一谈。"},{"id":"v284","bai":5,"tu":"汤","pinyin":"tāng","tuLoai":"danh từ","nghia":"canh; súp","viDu":"我点了一碗汤。"},{"id":"v285","bai":null,"tu":"提","pinyin":"tí","tuLoai":"động từ","nghia":"xách; nêu","viDu":"他提了一个很好的建议。"},{"id":"v286","bai":null,"tu":"提供","pinyin":"tígōng","tuLoai":"động từ","nghia":"cung cấp","viDu":"在中国，乘客可以在不少地铁(站里直接扫码购买食物和饮料，有的地铁站还提供免费借雨企、发雨衣等服务。"},{"id":"v287","bai":null,"tu":"提前","pinyin":"tíqián","tuLoai":"động từ/trạng từ","nghia":"sớm hơn; trước hạn","viDu":"所以冬天来北方，尤其是东北，一定要提前查好目的地的天气，看看下不下雪，气温怎么样。"},{"id":"v288","bai":null,"tu":"提醒","pinyin":"tíxǐng","tuLoai":"động từ","nghia":"nhắc nhở","viDu":"因此，很多人开始做出改变，提醒自己减轻压力、多多放松。"},{"id":"v289","bai":6,"tu":"体温","pinyin":"tǐwēn","tuLoai":"danh từ","nghia":"thân nhiệt","viDu":"医生告诉她，现在需要先把体温降下来。"},{"id":"v290","bai":4,"tu":"停","pinyin":"tíng","tuLoai":"động từ","nghia":"dừng; đỗ","viDu":"我忘了交电话费，手机停机了。"},{"id":"v291","bai":1,"tu":"通","pinyin":"tōng","tuLoai":"động từ/tính từ","nghia":"thông; kết nối","viDu":"电话终于打通了。"},{"id":"v292","bai":1,"tu":"通过","pinyin":"tōngguò","tuLoai":"động từ/giới từ","nghia":"thông qua; vượt qua","viDu":"热身:通过图片匹配和讨论等活动引入主题。"},{"id":"v293","bai":1,"tu":"通知","pinyin":"tōngzhī","tuLoai":"động từ/danh từ","nghia":"thông báo","viDu":"你现在才告诉我，我来不及通知大家了。"},{"id":"v294","bai":2,"tu":"同时","pinyin":"tóngshí","tuLoai":"trạng từ/liên từ","nghia":"đồng thời","viDu":"此外，新教程的主干课本在编写中突出交际情景化、结构简约化，同时借助数字手段使教材资源呈现立体化等特征。"},{"id":"v295","bai":8,"tu":"外出","pinyin":"wàichū","tuLoai":"động từ","nghia":"ra ngoài","viDu":"我也想外出旅游了。"},{"id":"v296","bai":null,"tu":"网购","pinyin":"wǎnggòu","tuLoai":"động từ","nghia":"mua sắm trực tuyến","viDu":"她的中国朋友知道后，，教她怎么用，她很快就学会用手机支付和网购了。"},{"id":"v297","bai":null,"tu":"网络","pinyin":"wǎngluò","tuLoai":"danh từ","nghia":"mạng; internet","viDu":"比如中国的网络安全法、个人信息保护法等就很好地保护了人们的个人信息。"},{"id":"v298","bai":4,"tu":"往往","pinyin":"wǎngwǎng","tuLoai":"trạng từ","nghia":"thường thường","viDu":"但是，适应新工作往往需要比较长的时间。"},{"id":"v299","bai":2,"tu":"位置","pinyin":"wèizhi","tuLoai":"danh từ","nghia":"vị trí","viDu":"房东说，小张要租的房子不太大，，房租不高，位置也比较好。"},{"id":"v300","bai":10,"tu":"温度","pinyin":"wēndù","tuLoai":"danh từ","nghia":"nhiệt độ","viDu":"就是呢，冬天北方和南方的温度差别还是很大的。"},{"id":"v301","bai":5,"tu":"午餐","pinyin":"wǔcān","tuLoai":"danh từ","nghia":"bữa trưa","viDu":"周末，白家月、陈天中、李文和安妮聚在一起吃午餐。"},{"id":"v302","bai":10,"tu":"误会","pinyin":"wùhuì","tuLoai":"động từ/danh từ","nghia":"hiểu lầm","viDu":"只用方言交流，可能会引起误会。"},{"id":"v303","bai":null,"tu":"吸引","pinyin":"xīyǐn","tuLoai":"động từ","nghia":"thu hút","viDu":"冬天，这个城市因为天气暖和而吸引了很多游客。"},{"id":"v304","bai":null,"tu":"细心","pinyin":"xìxīn","tuLoai":"tính từ","nghia":"tỉ mỉ; cẩn thận","viDu":"做调查的时候要细心。"},{"id":"v305","bai":8,"tu":"下降","pinyin":"xiàjiàng","tuLoai":"động từ","nghia":"giảm xuống","viDu":"最近他的工作效率下降了。"},{"id":"v306","bai":3,"tu":"下载","pinyin":"xiàzài","tuLoai":"động từ","nghia":"tải xuống","viDu":"李文帮陈天中下载了快递软件。"},{"id":"v307","bai":4,"tu":"鲜花","pinyin":"xiānhuā","tuLoai":"danh từ","nghia":"hoa tươi","viDu":"而且我喜欢看花，听说广州的鲜花市场很有有名，里面有各种植物。"},{"id":"v308","bai":null,"tu":"咸","pinyin":"xián","tuLoai":"tính từ","nghia":"mặn","viDu":"这道菜有点儿咸。"},{"id":"v309","bai":3,"tu":"现金","pinyin":"xiànjīn","tuLoai":"danh từ","nghia":"tiền mặt","viDu":"跟用现金相比，手机支付更方便些。"},{"id":"v310","bai":8,"tu":"相比","pinyin":"xiāngbǐ","tuLoai":"động từ","nghia":"so với","viDu":"跟一直加班相比，休息好了再工作，效率更高。"},{"id":"v311","bai":null,"tu":"相互","pinyin":"xiānghù","tuLoai":"trạng từ","nghia":"lẫn nhau","viDu":"后边的路还很长，希望他们能一直相互理解、相互支持。"},{"id":"v312","bai":5,"tu":"相同","pinyin":"xiāngtóng","tuLoai":"tính từ","nghia":"giống nhau","viDu":"中文真有意思，相同的字，顺序一换，意思就变了。"},{"id":"v313","bai":7,"tu":"想法","pinyin":"xiǎngfǎ","tuLoai":"danh từ","nghia":"ý nghĩ; ý tưởng","viDu":"很多年轻人和他想法一样。"},{"id":"v314","bai":8,"tu":"项目","pinyin":"xiàngmù","tuLoai":"danh từ","nghia":"dự án; hạng mục","viDu":"是啊，后来我就不接那么多项目了。"},{"id":"v315","bai":10,"tu":"小伙子","pinyin":"xiǎohuǒzi","tuLoai":"danh từ","nghia":"chàng trai","viDu":"这个小伙子后悔自己穿少了。"},{"id":"v316","bai":null,"tu":"效果","pinyin":"xiàoguǒ","tuLoai":"danh từ","nghia":"hiệu quả","viDu":"他虽然介绍得很清楚，但实际效果并不理想。"},{"id":"v317","bai":8,"tu":"效率","pinyin":"xiàolǜ","tuLoai":"danh từ","nghia":"hiệu suất","viDu":"休息好了，再回去上班时，心情恰快，工作效率也更高。"},{"id":"v318","bai":null,"tu":"心情","pinyin":"xīnqíng","tuLoai":"danh từ","nghia":"tâm trạng","viDu":"休息好了，再回去上班时，心情恰快，工作效率也更高。"},{"id":"v319","bai":4,"tu":"辛苦","pinyin":"xīnkǔ","tuLoai":"tính từ","nghia":"vất vả","viDu":"你工作了一天，辛苦了。"},{"id":"v320","bai":4,"tu":"信号","pinyin":"xìnhào","tuLoai":"danh từ","nghia":"tín hiệu","viDu":"我跟发视频的人联系了一下，对方马上向我要了妈妈的微信号。"},{"id":"v321","bai":2,"tu":"信息","pinyin":"xìnxī","tuLoai":"danh từ","nghia":"thông tin","viDu":"她刚才给我发信息，说她今天来不了了。"},{"id":"v322","bai":6,"tu":"醒","pinyin":"xǐng","tuLoai":"động từ","nghia":"tỉnh; thức dậy","viDu":"我每天早上七点醒。"},{"id":"v323","bai":9,"tu":"幸福","pinyin":"xìngfú","tuLoai":"tính từ/danh từ","nghia":"hạnh phúc","viDu":"是的，他们家真是一个幸福的家庭。"},{"id":"v324","bai":9,"tu":"幸运","pinyin":"xìngyùn","tuLoai":"tính từ","nghia":"may mắn","viDu":"杨同乐说自己很幸运，和王一雪这份同事间的友情，给他带来了美好的爱情。"},{"id":"v325","bai":6,"tu":"性","pinyin":"xìng","tuLoai":"hậu tố","nghia":"tính; đặc tính","viDu":"这项工作的安全性很重要。"},{"id":"v326","bai":6,"tu":"性别","pinyin":"xìngbié","tuLoai":"danh từ","nghia":"giới tính","viDu":"小张按照客户的年龄和性别写好了调查结果。"},{"id":"v327","bai":null,"tu":"性格","pinyin":"xìnggé","tuLoai":"danh từ","nghia":"tính cách","viDu":"嗯，他们尽管性格不同，但是有很多共同爱好。"},{"id":"v328","bai":null,"tu":"压力","pinyin":"yālì","tuLoai":"danh từ","nghia":"áp lực","viDu":"还是别给自己太大压力，否则，失去健康就不值得了。"},{"id":"v329","bai":null,"tu":"呀","pinyin":"ya","tuLoai":"trợ từ/thán từ","nghia":"nhé; à; ôi","viDu":"这里真漂亮呀！"},{"id":"v330","bai":6,"tu":"严重","pinyin":"yánzhòng","tuLoai":"tính từ","nghia":"nghiêm trọng","viDu":"医生给她做了检查，检查结果出来后，发现地得了比较严重的流行性感冒。"},{"id":"v331","bai":1,"tu":"研究","pinyin":"yánjiū","tuLoai":"động từ/danh từ","nghia":"nghiên cứu","viDu":"跟读研究生相比，我更想直接工作。"},{"id":"v332","bai":1,"tu":"研究生","pinyin":"yánjiūshēng","tuLoai":"danh từ","nghia":"học viên cao học","viDu":"跟读研究生相比，我更想直接工作。"},{"id":"v333","bai":null,"tu":"眼前","pinyin":"yǎnqián","tuLoai":"danh từ","nghia":"trước mắt","viDu":"眼前的风景非常美。"},{"id":"v334","bai":9,"tu":"阳光","pinyin":"yángguāng","tuLoai":"danh từ","nghia":"ánh nắng","viDu":"他性格阳光，工作也很积极。"},{"id":"v335","bai":1,"tu":"要是","pinyin":"yàoshi","tuLoai":"liên từ","nghia":"nếu","viDu":"我去哈尔滨主要是想看雪，听说春节时那里会举办很多活动。"},{"id":"v336","bai":null,"tu":"一下","pinyin":"yíxià","tuLoai":"lượng từ/bổ ngữ","nghia":"một chút; một lần","viDu":"她和一些客户交流了一下。"},{"id":"v337","bai":8,"tu":"因此","pinyin":"yīncǐ","tuLoai":"liên từ","nghia":"vì vậy","viDu":"因此，很多人开始做出改变，提醒自己减轻压力、多多放松。"},{"id":"v338","bai":null,"tu":"引起","pinyin":"yǐnqǐ","tuLoai":"động từ","nghia":"gây ra","viDu":"只用方言交流，可能会引起误会。"},{"id":"v339","bai":null,"tu":"印象","pinyin":"yìnxiàng","tuLoai":"danh từ","nghia":"ấn tượng","viDu":"我对他的第一印象很好。"},{"id":"v340","bai":null,"tu":"优点","pinyin":"yōudiǎn","tuLoai":"danh từ","nghia":"ưu điểm","viDu":"这个办法有很多优点。"},{"id":"v341","bai":null,"tu":"幽默","pinyin":"yōumò","tuLoai":"tính từ","nghia":"hài hước","viDu":"实刚认识不久，你的幽默与耐心就很吸引我，不过我当时也只把你当普通朋友。"},{"id":"v342","bai":9,"tu":"尤其","pinyin":"yóuqí","tuLoai":"trạng từ","nghia":"đặc biệt là","viDu":"所以冬天来北方，尤其是东北，一定要提前查好目的地的天气，看看下不下雪，气温怎么样。"},{"id":"v343","bai":null,"tu":"由于","pinyin":"yóuyú","tuLoai":"giới từ/liên từ","nghia":"do; bởi vì","viDu":"由于一直下大雨，所以我们决定不朴山了。"},{"id":"v344","bai":5,"tu":"油","pinyin":"yóu","tuLoai":"danh từ","nghia":"dầu; xăng","viDu":"车快没油了。"},{"id":"v345","bai":8,"tu":"游玩","pinyin":"yóuwán","tuLoai":"động từ","nghia":"đi chơi; tham quan","viDu":"外出游玩时，你喜欢看风景还是参观历史文化景点?"},{"id":"v346","bai":null,"tu":"友情","pinyin":"yǒuqíng","tuLoai":"danh từ","nghia":"tình bạn","viDu":"妈妈说，，但是她们还能联系上，而且美好的友情还在，她觉得很幸运。"},{"id":"v347","bai":6,"tu":"有效","pinyin":"yǒuxiào","tuLoai":"tính từ","nghia":"có hiệu quả","viDu":"解公司的管理方式，学会和同事有效交流，等等。"},{"id":"v348","bai":null,"tu":"于是","pinyin":"yúshì","tuLoai":"liên từ","nghia":"thế là; vì vậy","viDu":"于是，有人在网上说出了自己的担心。"},{"id":"v349","bai":null,"tu":"愉快","pinyin":"yúkuài","tuLoai":"tính từ","nghia":"vui vẻ","viDu":"这些小小的服务，不仅方便了人们的出行，也让大家的心情变得更加愉快。"},{"id":"v350","bai":8,"tu":"与","pinyin":"yǔ","tuLoai":"giới từ/liên từ","nghia":"với; và","viDu":"这个问题与环境有关。"},{"id":"v351","bai":null,"tu":"再次","pinyin":"zàicì","tuLoai":"trạng từ","nghia":"lần nữa","viDu":"今年冬天，我计划再次去哈尔滨看雪。"},{"id":"v352","bai":4,"tu":"再说","pinyin":"zàishuō","tuLoai":"động từ/liên từ","nghia":"nói sau; hơn nữa","viDu":"今天太晚了，别去超市了，再说外面还在下雨呢。"},{"id":"v353","bai":8,"tu":"暂停","pinyin":"zàntíng","tuLoai":"động từ","nghia":"tạm dừng","viDu":"我发现暂停下来、好好休息之后，我能把工作做得更快更好。"},{"id":"v354","bai":4,"tu":"早餐","pinyin":"zǎocān","tuLoai":"danh từ","nghia":"bữa sáng","viDu":"小王选好早餐后，突然发现手机没电了。"},{"id":"v355","bai":9,"tu":"责任","pinyin":"zérèn","tuLoai":"danh từ","nghia":"trách nhiệm","viDu":"特别是同乐人好，性格也好，很有责任感。"},{"id":"v356","bai":7,"tu":"真正","pinyin":"zhēnzhèng","tuLoai":"tính từ/trạng từ","nghia":"thật sự; chân chính","viDu":"要了解客户真正的想法。"},{"id":"v357","bai":2,"tu":"整个","pinyin":"zhěnggè","tuLoai":"đại từ","nghia":"toàn bộ","viDu":"看完整个房子后，我准备再去买几条和毛巾，其他东西还不需要。"},{"id":"v358","bai":null,"tu":"正","pinyin":"zhèng","tuLoai":"trạng từ","nghia":"đang; đúng lúc","viDu":"我正准备出门。"},{"id":"v359","bai":3,"tu":"正好","pinyin":"zhènghǎo","tuLoai":"trạng từ","nghia":"vừa đúng; đúng lúc","viDu":"呀,正好我也想出去呢。"},{"id":"v360","bai":null,"tu":"正式","pinyin":"zhèngshì","tuLoai":"tính từ","nghia":"chính thức","viDu":"介词“跟”一般在口语中、不太正式的场合中使用。"},{"id":"v361","bai":null,"tu":"证","pinyin":"zhèng","tuLoai":"danh từ","nghia":"giấy chứng nhận","viDu":"请把毕业证带来。"},{"id":"v362","bai":1,"tu":"证件","pinyin":"zhèngjiàn","tuLoai":"danh từ","nghia":"giấy tờ tùy thân","viDu":"这是我们的证件和材料。"},{"id":"v363","bai":8,"tu":"之后","pinyin":"zhīhòu","tuLoai":"danh từ","nghia":"sau đó","viDu":"我发现暂停下来、好好休息之后，我能把工作做得更快更好。"},{"id":"v364","bai":4,"tu":"之间","pinyin":"zhījiān","tuLoai":"danh từ","nghia":"giữa; khoảng giữa","viDu":"杨同乐和王一飞认识后，很聊得来，两人之间慢慢产生了爱情，最后成了夫妻。"},{"id":"v365","bai":9,"tu":"支持","pinyin":"zhīchí","tuLoai":"động từ","nghia":"ủng hộ; hỗ trợ","viDu":"学与研究出版社以及业内许多专家学者的间力支持与专业指导。"},{"id":"v366","bai":3,"tu":"支付","pinyin":"zhīfù","tuLoai":"động từ","nghia":"thanh toán","viDu":"跟用现金相比，手机支付更方便些。"},{"id":"v367","bai":1,"tu":"知识","pinyin":"zhīshi","tuLoai":"danh từ","nghia":"kiến thức","viDu":"比如，学习课本中没有的专业知识，了。"},{"id":"v368","bai":null,"tu":"直接","pinyin":"zhíjiē","tuLoai":"tính từ/trạng từ","nghia":"trực tiếp","viDu":"此材料很重要，必须直接交给他。"},{"id":"v369","bai":8,"tu":"值得","pinyin":"zhíde","tuLoai":"động từ","nghia":"đáng","viDu":"还是别给自己太大压力，否则，失去健康就不值得了。"},{"id":"v370","bai":null,"tu":"植物","pinyin":"zhíwù","tuLoai":"danh từ","nghia":"thực vật","viDu":"而且我喜欢看花，听说广州的鲜花市场很有有名，里面有各种植物。"},{"id":"v371","bai":5,"tu":"至少","pinyin":"zhìshǎo","tuLoai":"trạng từ","nghia":"ít nhất","viDu":"每年至少有两百名留学生来我校学习中文专业。"},{"id":"v372","bai":null,"tu":"治疗","pinyin":"zhìliáo","tuLoai":"động từ","nghia":"điều trị","viDu":"医生会给出治疗的方法。"},{"id":"v373","bai":5,"tu":"中餐","pinyin":"zhōngcān","tuLoai":"danh từ","nghia":"món ăn Trung Quốc","viDu":"你习惯吃中餐了吗？"},{"id":"v374","bai":null,"tu":"种","pinyin":"zhǒng","tuLoai":"lượng từ","nghia":"loại; giống","viDu":"商店里有很多种水果。"},{"id":"v375","bai":null,"tu":"重","pinyin":"zhòng","tuLoai":"tính từ","nghia":"nặng","viDu":"这个袋子太重了。"},{"id":"v376","bai":5,"tu":"重视","pinyin":"zhòngshì","tuLoai":"động từ","nghia":"coi trọng","viDu":"年轻人刚进入社会时，应该重视积累经验。"},{"id":"v377","bai":2,"tu":"周围","pinyin":"zhōuwéi","tuLoai":"danh từ","nghia":"xung quanh","viDu":"嗯，这个小区到处是花，还种了不少树，周围也很安静。"},{"id":"v378","bai":5,"tu":"主人","pinyin":"zhǔrén","tuLoai":"danh từ","nghia":"chủ nhân; chủ nhà","viDu":"大家坐下时，主人会请客人先坐。"},{"id":"v379","bai":8,"tu":"主意","pinyin":"zhǔyi","tuLoai":"danh từ","nghia":"ý kiến; cách","viDu":"这是个好主意！"},{"id":"v380","bai":null,"tu":"煮","pinyin":"zhǔ","tuLoai":"động từ","nghia":"nấu; luộc","viDu":"我来煮一碗米线。"},{"id":"v381","bai":9,"tu":"祝","pinyin":"zhù","tuLoai":"động từ","nghia":"chúc","viDu":"祝你生日快乐！"},{"id":"v382","bai":null,"tu":"专门","pinyin":"zhuānmén","tuLoai":"trạng từ/tính từ","nghia":"chuyên; đặc biệt","viDu":"这是你专门为我做的吗？"},{"id":"v383","bai":1,"tu":"专业","pinyin":"zhuānyè","tuLoai":"danh từ/tính từ","nghia":"chuyên ngành; chuyên nghiệp","viDu":"比如，学习课本中没有的专业知识，了。"},{"id":"v384","bai":3,"tu":"转","pinyin":"zhuǎn","tuLoai":"động từ","nghia":"chuyển; rẽ","viDu":"到十字路口直接右转。"},{"id":"v385","bai":10,"tu":"资源","pinyin":"zīyuán","tuLoai":"danh từ","nghia":"tài nguyên","viDu":"二、拒绝浪费节约资源，坚持一水多用、人走灯关、餐餐都“光盘”。"},{"id":"v386","bai":null,"tu":"租","pinyin":"zū","tuLoai":"động từ","nghia":"thuê","viDu":"我想在学校附近租房子。"},{"id":"v387","bai":null,"tu":"尊重","pinyin":"zūnzhòng","tuLoai":"động từ","nghia":"tôn trọng","viDu":"白家月听后觉得很有意思，她认为这么做是照顾客人、尊重老人的表现。"},{"id":"v388","bai":null,"tu":"座","pinyin":"zuò","tuLoai":"lượng từ","nghia":"tòa; ngọn","viDu":"城里有一座大桥。"},{"id":"v389","bai":5,"tu":"座位","pinyin":"zuòwèi","tuLoai":"danh từ","nghia":"chỗ ngồi","viDu":"安排，年龄比较大的客人往往会坐在中间或者面对门口的座位。"},{"id":"v390","bai":null,"tu":"长城","pinyin":"Chángchéng","tuLoai":"tên riêng","nghia":"Vạn Lý Trường Thành","viDu":"八达岭长城的太美了，我很喜欢。"},{"id":"v391","bai":null,"tu":"故宫","pinyin":"Gùgōng","tuLoai":"tên riêng","nghia":"Cố Cung","viDu":"有人喜欢参观长城、故宫等著名景点。"},{"id":"v392","bai":10,"tu":"广州","pinyin":"Guǎngzhōu","tuLoai":"tên riêng","nghia":"Quảng Châu","viDu":"我想在广州过年，那里冬天比较上暖和。"},{"id":"v393","bai":null,"tu":"贵州","pinyin":"Guìzhōu","tuLoai":"tên riêng","nghia":"Quý Châu","viDu":"贵州有很多美丽的自然风景。"},{"id":"v394","bai":null,"tu":"哈尔滨","pinyin":"Hā’ěrbīn","tuLoai":"tên riêng","nghia":"Cáp Nhĩ Tân","viDu":"我去哈尔滨主要是想看雪，听说春节时那里会举办很多活动。"},{"id":"v395","bai":5,"tu":"红烧羊肉","pinyin":"Hóngshāo Yángròu","tuLoai":"tên món ăn","nghia":"thịt cừu kho tàu","viDu":"李文点了一份红烧羊肉。"},{"id":"v396","bai":null,"tu":"辣子鸡","pinyin":"Làzǐjī","tuLoai":"tên món ăn","nghia":"gà xào ớt","viDu":"白家月想吃辣的，要了辣子鸡。"},{"id":"v397","bai":null,"tu":"水煮鱼","pinyin":"Shuǐzhǔyú","tuLoai":"tên món ăn","nghia":"cá luộc cay Tứ Xuyên","viDu":"这家饭店的水煮鱼很有名。"},{"id":"v398","bai":null,"tu":"松鼠鳜鱼","pinyin":"Sōngshǔ Guìyú","tuLoai":"tên món ăn","nghia":"cá quế hình sóc sốt chua ngọt","viDu":"松鼠鳜鱼是一道有名的中国菜。"},{"id":"v399","bai":null,"tu":"酸汤米线","pinyin":"Suāntāng Mǐxiàn","tuLoai":"tên món ăn","nghia":"bún gạo nước dùng chua","viDu":"安妮点了一碗酸汤米线。"},{"id":"v400","bai":3,"tu":"微信","pinyin":"Wēixìn","tuLoai":"tên riêng","nghia":"WeChat","viDu":"他/她最近生病了，给你发微信，询问如何在医院看病。"},{"id":"v401","bai":3,"tu":"支付宝","pinyin":"Zhīfùbǎo","tuLoai":"tên riêng","nghia":"Alipay","viDu":"前两天和李文喝咖啡时，他帮我下载了微信和支付宝，教我认识里边的汉字，还教我用手机进行支付。"}];
+
+/* ---------- utilities ---------- */
+const $ = s => document.querySelector(s);
+const h = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const DAY = 864e5;
+/* Hiệu chỉnh số bài theo bảng 词语表 ở cuối giáo trình. */
+const TEXTBOOK_LESSON = {
+  '签证':1, '证':1, '座':1, '申请':1, '减轻':1, '压力':1, '加油':1,
+  '当':1, '教育':1, '成为':1, '另':1,
+  '购买':4, '交通':8
+};
+VOCAB.forEach(w => { if (TEXTBOOK_LESSON[w.tu]) w.bai = TEXTBOOK_LESSON[w.tu]; });
+const byId = Object.fromEntries(VOCAB.map(w => [w.id, w]));
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+const ICON = {
+  spk: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>'
+};
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2200); }
+
+/* ---------- speech ---------- */
+function speak(text, rate) {
+  try {
+    const s = window.speechSynthesis;
+    if (!s) { toast('Trình duyệt này không hỗ trợ đọc tiếng Trung.'); return; }
+    s.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'zh-CN'; u.rate = rate || 0.9;
+    const vs = s.getVoices();
+    const v = vs.find(v => /zh[-_]CN/i.test(v.lang)) || vs.find(v => /^zh/i.test(v.lang));
+    if (v) u.voice = v;
+    s.speak(u);
+  } catch (e) { toast('Không phát được âm thanh.'); }
+}
+try { window.speechSynthesis && window.speechSynthesis.getVoices(); } catch (e) {}
+
+/* ---------- lessons ---------- */
+const BOOK_A = [1,2,3,4,5,6,7,8,9,10];
+const BOOK_B = [11,12,13,14,15,16,17,18,19,20];
+const LESSON_INFO = {
+  1: { title:'我们来中国学习了', summary:[
+    'Nắm được từ vựng và thông tin cần thiết khi làm thủ tục nhập học, xin học bổng tại Trung Quốc.',
+    'Biết trình bày lý do lựa chọn chuyên ngành và định hướng phát triển nghề nghiệp trong tương lai.',
+    'Hiểu thêm về việc học tập và cuộc sống của du học sinh tại các trường đại học Trung Quốc.'
+  ]},
+  2: { title:'租到了合适的房子', summary:[
+    'Nắm được từ vựng và cách trao đổi về chủ đề thuê nhà.',
+    'Biết trình bày nhu cầu, mong muốn và các yêu cầu khi tìm thuê nhà.',
+    'Hiểu thêm quan niệm của người Trung Quốc về nhà ở.'
+  ]},
+  3: { title:'手机扫一下', summary:[
+    'Nắm được cách trao đổi về tải ứng dụng, mua sắm trực tuyến và thanh toán bằng điện thoại.',
+    'Biết trình bày những công dụng khác nhau của điện thoại trong cuộc sống.',
+    'Hiểu cách bảo vệ thông tin cá nhân trong thời đại Internet.'
+  ]},
+  4: { title:'很高兴能帮到你', summary:[
+    'Nắm được cách đề nghị giúp đỡ hoặc hỗ trợ người khác trong cuộc sống hằng ngày.',
+    'Biết trình bày các phương thức đi lại cùng ưu điểm và nhược điểm của từng phương thức.',
+    'Hiểu thêm về những dịch vụ tiện ích dành cho người dân tại các thành phố Trung Quốc.'
+  ]},
+  5: { title:'“不怕辣”和“怕不辣”', summary:[
+    'Nắm được từ vựng và cách trao đổi về thói quen ăn uống, gặp gỡ và dùng bữa cùng nhau.',
+    'Biết trình bày sở thích ăn uống và trải nghiệm dùng bữa của bản thân.',
+    'Hiểu thêm thói quen ăn uống và phép sắp xếp chỗ ngồi trong các bữa tiệc trang trọng của người Trung Quốc.'
+  ]},
+  6: { title:'我陪你去看病', summary:[
+    'Nắm được cách trao đổi về tình trạng sức khỏe và phương án điều trị.',
+    'Biết kể lại quá trình đi khám bệnh bằng lời nói hoặc bài viết.',
+    'Hiểu quy trình cơ bản khi đi khám bệnh tại Trung Quốc.'
+  ]},
+  7: { title:'在工作中学习', summary:[
+    'Nắm được cách trao đổi về nhiệm vụ và kế hoạch sắp xếp công việc.',
+    'Biết chia sẻ kinh nghiệm làm việc và đưa ra lời khuyên về phát triển nghề nghiệp.',
+    'Hiểu tầm quan trọng của việc học hỏi và tích lũy kinh nghiệm trong môi trường làm việc.'
+  ]},
+  8: { title:'该放松时就放松', summary:[
+    'Nắm được cách trao đổi về những phương pháp và hoạt động giúp giảm căng thẳng.',
+    'Biết trình bày quan điểm về việc giảm áp lực và thư giãn.',
+    'Hiểu thêm những địa điểm và hoạt động người Trung Quốc thường lựa chọn để thư giãn vào cuối tuần.'
+  ]},
+  9: { title:'遇见你，刚刚好', summary:[
+    'Nắm được cách trao đổi về tình yêu và tình bạn.',
+    'Biết trình bày giá trị và ý nghĩa của tình yêu, tình bạn.',
+    'Hiểu thêm quan niệm của người Trung Quốc về tình yêu và tình bạn.'
+  ]},
+  10: { title:'南方不懂北方的冷', summary:[
+    'Nắm được cách trao đổi về mối quan hệ giữa khí hậu, môi trường và đời sống.',
+    'Biết trình bày tầm quan trọng cùng những hành động cụ thể để bảo vệ môi trường.',
+    'Hiểu sự khác biệt về khí hậu và đời sống xã hội giữa miền Bắc và miền Nam Trung Quốc.'
+  ]}
+};
+const LESSON_WORD_ORDER = {
+  1: ['本科','硕士','博士','研究生','专业','课程','教育','教师','知识','研究','入学','签证','证件','材料','证','通知','申请','奖学金','获得','减轻','经济','压力','加油','国际','贸易','方面','将来','当','成为','另','随着','通过','交流','适应','食堂','座','活动','任何','要是','通'],
+  2: ['信息','房东','查看','整个','客厅','厨房','位置','周围','热闹','价格','理想','建议','入住','收拾','毛巾','台','平常','基本上','接着','同时','不过','而','日记'],
+  3: ['软件','下载','微信','支付宝','密码','身份证','个人','法律','保证','支付','现金','付','结账','购物','订','快递','进行','各种','不仅','甚至','随便','乱','能否','改变','目的地','十字路口','转','正好','手指'],
+  4: ['感谢','互相','联系','力气','辛苦','出行','方式','电动车','充电','速度','距离','乘客','流行','早餐','食物','鲜花','来得及','来不及','停','剩','省','更加','往往','再说','算','信号','之间'],
+  5: ['中餐','午餐','红烧羊肉','辣','汤','油','倒','够','不够','肚子','主人','座位','安排','按照','年龄','面对','随意','普通','相同','至少','达到','重视'],
+  6: ['感觉','难受','咳','咳嗽','体温','严重','情况','赶快','陪','翻译','护士','排队','收费','地址','性别','家庭','结果','打针','有效','按时','醒','偶尔','好','身','性','经验','房租'],
+  7: ['任务','计划','市场','调查','客户','想法','真正','实际','谈','看法','管理','生意','基础','积累','社会','困难','缺点','打扰','既然','笔'],
+  8: ['紧张','加班','项目','效率','下降','暂停','之后','放松','主意','外出','游玩','大自然','风景','美景','景点','市区','首都','相比','实际上','因此','值得','失去','不管','与','部','手段','降'],
+  9: ['感情','感受','对方','共同','理解','支持','耐心','责任','浪漫','巧克力','祝','幸福','幸运','美好','感动','阳光','精彩','经营','深','实在','顺便','尽管','尤其','从来','从此','此','间'],
+  10: ['温度','气温','摄氏度','差别','寒假','厚','受不了','小伙子','公里','广州','环保','绿色','垃圾','分类','资源','节约','浪费','使用','使','开展','举办','景色','普通话','误会','较','亲爱']
+};
+const lessonWords = b => {
+  const words = b === 'khac' ? VOCAB.filter(w => w.bai == null) : VOCAB.filter(w => w.bai === +b);
+  const order = LESSON_WORD_ORDER[+b];
+  if (!order) return words;
+  const rank = new Map(order.map((word, i) => [word, i]));
+  return words.slice().sort((a, z) => (rank.get(a.tu) ?? 9999) - (rank.get(z.tu) ?? 9999));
+};
+const lessonLabel = b => b === 'khac' ? 'Từ bổ sung' : 'Bài ' + b;
+const lessonInfo = b => LESSON_INFO[+b] || null;
+
+/* ---------- grammar (gắn theo bài có từ khóa tương ứng) ---------- */
+const GRAMMAR = [
+  { id:'g-er', bai:2, key:'而', title:'Liên từ 而', formula:'A（，）而 B',
+    explain:'Nối hai vế. Có thể chỉ quan hệ đối lập (còn, trong khi) hoặc nối nguyên nhân/cách thức với kết quả (mà, nên).',
+    ex:[['北方冬天很冷，而南方比较暖和。','Miền Bắc mùa đông rất lạnh, còn miền Nam khá ấm.'],['这个城市因为天气暖和而吸引了很多游客。','Thành phố này thu hút nhiều du khách vì thời tiết ấm áp.']],
+    qs:[['北方冬天很冷，___南方比较暖和。',['而','所以','既然','不管'],0],['这个城市因为天气暖和___吸引了很多游客。',['而','就','还','都'],0],['她不是不想去，___是没有时间。',['而','就','还','都'],0]] },
+  { id:'g-bujin', bai:3, key:'不仅', title:'不仅……还 / 也 / 而且……', formula:'S + 不仅 + A，还 / 也 / 而且 + B',
+    explain:'"Không những A mà còn B". Vế sau bổ sung thông tin theo cùng chiều, thường mạnh hơn vế trước.',
+    ex:[['现在我不仅会扫码结账，还会用手机在网上购物了。','Giờ tôi không những biết quét mã thanh toán mà còn biết mua sắm online.'],['骑电动车不仅快，也很方便。','Đi xe điện không những nhanh mà còn tiện.']],
+    qs:[['他不仅会说汉语，___会说日语。',['还','就','都','才'],0],['这个房子___价格便宜，而且离学校很近。',['不仅','既然','不管','尽管'],0],['骑电动车不仅快，___很方便。',['也','就','才','都'],0]] },
+  { id:'g-laide', bai:4, key:'来得及', title:'来得及 / 来不及', formula:'（还）来得及 + V　｜　来不及 + V',
+    explain:'来得及: còn kịp làm gì. 来不及: không kịp làm gì. Thường đi với thời gian còn lại.',
+    ex:[['没来得及吃早饭的人在这里就能买到热包子和牛奶。','Người chưa kịp ăn sáng có thể mua bánh bao nóng và sữa ở đây.'],['你现在才告诉我，我来不及通知大家了。','Giờ bạn mới nói, tôi không kịp báo cho mọi người nữa.']],
+    qs:[['电影七点开始，现在才六点半，我们还___。',['来得及','来不及','不够','达到'],0],['我起晚了，___吃早饭了。',['来不及','来得及','不管','按时'],0],['离火车开车只有两分钟了，恐怕___了。',['来不及','来得及','达到','基本上'],0]] },
+  { id:'g-anzhao', bai:5, key:'按照', title:'Giới từ 按照 (so với 按时)', formula:'按照 + 规定 / 要求 / 计划… + V',
+    explain:'按照: làm theo một tiêu chuẩn, yêu cầu, kế hoạch. Khác 按时 (đúng giờ) là trạng từ chỉ thời gian.',
+    ex:[['小张按照客户的年龄和性别写好了调查结果。','Tiểu Trương viết kết quả khảo sát theo tuổi và giới tính khách hàng.'],['医生让她按时吃药，多喝水。','Bác sĩ dặn cô ấy uống thuốc đúng giờ, uống nhiều nước.']],
+    qs:[['请大家___老师的要求完成作业。',['按照','按时','既然','不仅'],0],['医生让她回家以后___吃药。',['按时','按照','从来','互相'],0],['我们___计划明天出发。',['按照','按时','距离','此外'],0]] },
+  { id:'g-jiran', bai:7, key:'既然', title:'既然……就……', formula:'既然 + A（sự thật đã biết），就 + B（kết luận/đề nghị）',
+    explain:'"Đã… thì…". Vế trước là điều đã xảy ra hoặc đã xác định, vế sau là kết luận hay lời khuyên dựa trên đó.',
+    ex:[['既然出差时间不长，就要安排好时间，多获得有用的信息。','Đã đi công tác không lâu thì phải sắp xếp thời gian, thu được nhiều thông tin hữu ích.'],['既然你不舒服，就早点儿回家休息吧。','Đã không khỏe thì về nhà nghỉ sớm đi.']],
+    qs:[['___你已经决定了，就去做吧。',['既然','不管','尽管','不仅'],0],['既然出差时间不长，___要安排好时间。',['就','还','也','才'],0],['既然大家都同意，我们___这样办吧。',['就','都','而','却'],0]] },
+  { id:'g-buguan', bai:8, key:'不管', title:'不管……都 / 也……', formula:'不管 + (từ để hỏi / A不A / A还是B)，都 / 也 + kết quả',
+    explain:'"Bất kể… đều…". Sau 不管 phải là một cụm có nhiều khả năng (怎么样, 哪儿, 好不好, A还是B), không dùng câu khẳng định đơn.',
+    ex:[['不管去哪儿，能放松的地方都行。','Đi đâu cũng được, miễn là nơi có thể thư giãn.'],['不管遇到多大困难，我们都要坚持。','Dù gặp khó khăn lớn đến đâu, chúng ta đều phải kiên trì.']],
+    qs:[['___天气怎么样，我们都要去。',['不管','既然','尽管','不仅'],0],['不管去哪儿，能放松的地方___行。',['都','就','才','还'],0],['Câu nào đúng?',['不管天气好不好，我都去跑步。','不管天气很好，我都去跑步。','不管天气好，我就去跑步。','不管天气好不好，我才去跑步。'],0]] },
+  { id:'g-jinguan', bai:9, key:'尽管', title:'尽管……但是 / 可是 / 还是……', formula:'尽管 + A（sự thật），但是 / 可是 / 还是 + B',
+    explain:'"Mặc dù… nhưng…". Vế sau trái với điều vế trước khiến ta chờ đợi. Khác 不管: 尽管 đi với sự thật cụ thể.',
+    ex:[['他们尽管性格不同，但是有很多共同爱好。','Tuy tính cách khác nhau nhưng họ có nhiều sở thích chung.'],['尽管很累，他还是坚持完成了工作。','Dù rất mệt, anh ấy vẫn cố hoàn thành công việc.']],
+    qs:[['___他们性格不同，但是有很多共同爱好。',['尽管','不管','既然','否则'],0],['尽管很累，他___坚持完成了工作。',['还是','就','都','才'],0],['尽管下雨了，___比赛照常进行。',['但是','所以','因为','否则'],0]] },
+  { id:'g-conglai', bai:9, key:'从来', title:'从来 + 不 / 没(有) (so với 从此)', formula:'从来 + 不 + V（thói quen）｜ 从来 + 没(有) + V + 过',
+    explain:'从来: từ trước tới nay, thường dùng với phủ định. 从此: từ đó trở đi, chỉ mốc thay đổi.',
+    ex:[['他从来不喝咖啡。','Anh ấy xưa nay không uống cà phê.'],['我从来没去过哈尔滨。','Tôi chưa từng đến Cáp Nhĩ Tân.']],
+    qs:[['他___不喝咖啡。',['从来','从此','刚才','马上'],0],['我从来___去过哈尔滨。',['没','不','了','就'],0],['大学毕业后他去了国外，___我们就慢慢失去了联系。',['从此','从来','本来','将来'],0]] },
+  { id:'g-jiyou', bai:null, key:'既', title:'既……又 / 也……', formula:'既 + A，又 / 也 + B（A, B cùng loại: tính từ hoặc động từ）',
+    explain:'"Vừa… vừa…", nêu hai đặc điểm cùng tồn tại.',
+    ex:[['这家饭馆的菜既好吃，又便宜。','Món ăn quán này vừa ngon vừa rẻ.'],['他既是我的老师，也是我的朋友。','Anh ấy vừa là thầy, vừa là bạn tôi.']],
+    qs:[['这家饭馆的菜既好吃，___便宜。',['又','还','就','都'],0],['电动车___快又方便。',['既','不管','尽管','否则'],0],['他既是我的老师，___是我的朋友。',['又','就','才','都'],0]] },
+  { id:'g-fouze', bai:null, key:'否则', title:'否则', formula:'A（điều cần làm），否则 + B（hậu quả）',
+    explain:'"Nếu không thì…". Vế trước là lời khuyên/điều kiện, vế sau là hậu quả khi không làm theo.',
+    ex:[['还是别给自己太大压力，否则，失去健康就不值得了。','Đừng tạo áp lực quá lớn, nếu không mất sức khỏe thì không đáng.'],['快点儿走吧，否则就来不及了。','Đi nhanh lên, không thì không kịp.']],
+    qs:[['你要按时吃药，___病不会好。',['否则','既然','尽管','不管'],0],['快点儿走吧，___就来不及了。',['否则','而且','所以','此外'],0],['别给自己太大压力，___失去健康就不值得了。',['否则','因此','并且','接着'],0]] }
+];
+
+/* ---------- authentication & progress ---------- */
+const A_KEY = 'hsk4:active';
+const STUDENT_EMAILS = Object.freeze({
+  thuytien:'thuytien@students.lelaoshi.vn',
+  kieuoanh:'kieuoanh@students.lelaoshi.vn',
+  ngocoanh:'ngocoanh@students.lelaoshi.vn'
+});
+const EMAIL_TO_STUDENT = Object.fromEntries(Object.entries(STUDENT_EMAILS).map(([name, email]) => [email, name]));
+const SB_CONFIG = window.HSK_SUPABASE_CONFIG || {};
+const authConfigured = /^https:\/\/.+\.supabase\.co$/.test(SB_CONFIG.url || '') && /^sb_publishable_/.test(SB_CONFIG.publishableKey || '');
+let sb = null, authUser = null, remoteSaveTimer = null;
+let active = LS.get(A_KEY, 'Học viên 1');
+const blank = () => ({ srs:{}, quiz:{total:0, correct:0}, wrongs:{}, done:[], mocks:[] });
+let P = Object.assign(blank(), LS.get('hsk4:p:' + active, {}));
+const saveLocal = () => { LS.set('hsk4:p:' + active, P); LS.set(A_KEY, active); };
+const save = () => {
+  saveLocal();
+  if (sb && authUser) {
+    clearTimeout(remoteSaveTimer);
+    remoteSaveTimer = setTimeout(syncRemoteProgress, 500);
+  }
+};
+function updateAuthUI() {
+  $('#loginBtn').hidden = !!authUser;
+  $('#authUser').hidden = !authUser;
+  if (authUser) {
+    $('#authName').textContent = active;
+    $('#authAvatar').textContent = active.slice(0, 1);
+  }
+}
+function showAuth(required = false) {
+  $('#authModal').hidden = false;
+  $('#authClose').hidden = required;
+  $('#authSetupNote').hidden = authConfigured;
+  $('#authError').hidden = true;
+  document.body.classList.toggle('auth-required', required);
+  setTimeout(() => $('#loginUsername').focus(), 30);
+}
+function hideAuth() {
+  if (document.body.classList.contains('auth-required')) return;
+  $('#authModal').hidden = true;
+}
+async function syncRemoteProgress() {
+  if (!sb || !authUser) return;
+  const { error } = await sb.from('student_progress').upsert({ user_id:authUser.id, progress:P, updated_at:new Date().toISOString() }, { onConflict:'user_id' });
+  if (error) console.error('Không lưu được tiến độ:', error.message);
+}
+async function loadRemoteProgress() {
+  if (!sb || !authUser) return;
+  const { data, error } = await sb.from('student_progress').select('progress').eq('user_id', authUser.id).maybeSingle();
+  if (error) { toast('Không tải được tiến độ từ Supabase.'); console.error(error); return; }
+  if (data && data.progress) P = Object.assign(blank(), data.progress);
+  else await syncRemoteProgress();
+  saveLocal();
+}
+async function applySession(session) {
+  if (!session || !session.user) return false;
+  if (authUser && authUser.id === session.user.id) return true;
+  const email = String(session.user.email || '').toLowerCase();
+  const username = EMAIL_TO_STUDENT[email] || session.user.user_metadata?.username;
+  if (!STUDENT_EMAILS[username]) { await sb.auth.signOut(); return false; }
+  authUser = session.user;
+  active = username;
+  P = Object.assign(blank(), LS.get('hsk4:p:' + active, {}));
+  saveLocal();
+  await loadRemoteProgress();
+  document.body.classList.remove('auth-required');
+  $('#authModal').hidden = true;
+  updateAuthUI();
+  route();
+  return true;
+}
+async function initAuth() {
+  updateAuthUI();
+  route();
+  if (!authConfigured || !window.supabase?.createClient) return;
+  sb = window.supabase.createClient(SB_CONFIG.url, SB_CONFIG.publishableKey);
+  const { data } = await sb.auth.getSession();
+  if (!(await applySession(data.session))) showAuth(true);
+  sb.auth.onAuthStateChange((event, session) => setTimeout(() => {
+    if (event === 'SIGNED_IN' && session) applySession(session);
+    if (event === 'SIGNED_OUT') {
+      authUser = null;
+      active = 'Học viên 1'; P = Object.assign(blank(), LS.get('hsk4:p:' + active, {}));
+      updateAuthUI(); route(); showAuth(true);
+    }
+  }, 0));
+}
+$('#loginBtn').addEventListener('click', () => showAuth(authConfigured && !authUser));
+$('#authClose').addEventListener('click', hideAuth);
+$('#authModal').addEventListener('click', e => { if (e.target === $('#authModal')) hideAuth(); });
+$('#logoutBtn').addEventListener('click', async () => { if (sb) await sb.auth.signOut(); });
+$('#loginForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const username = $('#loginUsername').value.trim().toLowerCase();
+  const password = $('#loginPassword').value;
+  const errorBox = $('#authError'), submit = $('#loginSubmit');
+  if (!authConfigured || !window.supabase?.createClient) {
+    errorBox.textContent = 'Supabase chưa được cấu hình. Hãy làm theo hướng dẫn thiết lập bên dưới.'; errorBox.hidden = false; return;
+  }
+  if (!STUDENT_EMAILS[username]) {
+    errorBox.textContent = 'Tên đăng nhập hoặc mật khẩu không đúng.'; errorBox.hidden = false; return;
+  }
+  submit.disabled = true; submit.textContent = 'Đang đăng nhập…'; errorBox.hidden = true;
+  const { data, error } = await sb.auth.signInWithPassword({ email:STUDENT_EMAILS[username], password });
+  submit.disabled = false; submit.textContent = 'Đăng nhập';
+  if (error || !(await applySession(data.session))) {
+    errorBox.textContent = 'Tên đăng nhập hoặc mật khẩu không đúng.'; errorBox.hidden = false;
+  }
+});
+
+const box = id => (P.srs[id] && P.srs[id].box) || 0;
+const seen = id => !!P.srs[id];
+const isDue = id => P.srs[id] && P.srs[id].due <= Date.now();
+const known = id => box(id) >= 3;
+const INTERVALS = [0, 1, 2, 4, 7, 15, 30, 60];
+function rateCard(id, r) {
+  const s = P.srs[id] || { box:0, due:0, reps:0, lapses:0 };
+  s.reps++;
+  if (r === 0) { s.box = 0; s.lapses++; s.due = Date.now() + 60e3; P.wrongs[id] = (P.wrongs[id] || 0) + 1; }
+  else if (r === 1) { s.box = Math.max(1, s.box); s.due = Date.now() + DAY; }
+  else if (r === 2) { s.box = Math.min(7, s.box + 1); s.due = Date.now() + INTERVALS[s.box] * DAY; }
+  else { s.box = Math.min(7, s.box + 2); s.due = Date.now() + INTERVALS[s.box] * DAY * 1.3; }
+  P.srs[id] = s; save();
+}
+function recordAnswer(id, ok) {
+  P.quiz.total++; if (ok) P.quiz.correct++;
+  if (!ok) {
+    P.wrongs[id] = (P.wrongs[id] || 0) + 1;
+    const s = P.srs[id] || { box:0, due:0, reps:0, lapses:0 };
+    s.box = 0; s.due = Date.now(); P.srs[id] = s;
+  }
+  save();
+}
+
+/* ---------- router ---------- */
+const TABS = [['lo-trinh','Lộ trình'],['tu-vung','Từ vựng'],['flashcard','Flashcard'],['ngu-phap','Ngữ pháp'],['luyen-tap','Luyện tập'],['tien-do','Tiến độ']];
+function go(hash) { if (location.hash.slice(1) === hash) route(); else location.hash = hash; }
+function route() {
+  const hsh = (location.hash || '#lo-trinh').slice(1);
+  const tab = hsh.startsWith('bai-') ? 'lo-trinh' : (TABS.some(t => t[0] === hsh) ? hsh : 'lo-trinh');
+  $('#tabs').innerHTML = TABS.map(([k, l]) => `<button class="tab" data-go="${k}" ${k === tab ? 'aria-current="page"' : ''}>${l}</button>`).join('');
+  clearInterval(mock.timer);
+  try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
+  const v = $('#view');
+  if (hsh.startsWith('bai-')) return renderLesson(v, hsh.slice(4));
+  ({ 'lo-trinh':renderRoadmap, 'tu-vung':renderVocab, 'flashcard':renderFlashSetup, 'ngu-phap':renderGrammar, 'luyen-tap':renderQuizSetup, 'tien-do':renderProgress })[tab](v);
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', route);
+
+/* ---------- global clicks ---------- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-go],[data-say],[data-act]');
+  if (!t) return;
+  if (t.dataset.go) { go(t.dataset.go); return; }
+  if (t.dataset.say) { e.stopPropagation(); speak(t.dataset.say, t.dataset.rate ? +t.dataset.rate : undefined); return; }
+  const fn = ACTIONS[t.dataset.act]; if (fn) fn(t, e);
+});
+const ACTIONS = {};
+const spkBtn = (text, label) => `<button class="icon-btn" data-say="${h(text)}" aria-label="${h(label || 'Nghe')}" title="Nghe">${ICON.spk}</button>`;
+const lessonOptions = (sel, withAll = true) =>
+  (withAll ? `<option value="all" ${sel === 'all' ? 'selected' : ''}>Tất cả (上 bài 1–10)</option>` : '') +
+  BOOK_A.map(b => `<option value="${b}" ${String(sel) === String(b) ? 'selected' : ''}>Bài ${b} · ${h(LESSON_INFO[b].title)}</option>`).join('') +
+  `<option value="khac" ${sel === 'khac' ? 'selected' : ''}>Từ bổ sung (chưa gán bài)</option>`;
+const poolFor = sel => {
+  if (Array.isArray(sel)) {
+    const chosen = new Set(sel.map(String));
+    return BOOK_A.filter(b => chosen.has(String(b))).flatMap(lessonWords);
+  }
+  return sel === 'all' ? VOCAB.filter(w => w.bai != null) : lessonWords(sel);
+};
+
+/* ---------- 1. Roadmap ---------- */
+function lessonCard(b) {
+  const ws = lessonWords(b);
+  const info = lessonInfo(b);
+  const k = ws.filter(w => known(w.id)).length;
+  const pct = ws.length ? Math.round(k / ws.length * 100) : 0;
+  const done = P.done.includes(String(b));
+  const gps = GRAMMAR.filter(g => g.bai === b);
+  return `<button class="lesson ${done ? 'done' : ''}" data-go="bai-${b}">
+    <div class="lesson-num"><b>${lessonLabel(b)}${info ? ` · <span class="hz">${h(info.title)}</span>` : ''}</b>${done ? '<span class="chip acc">Đã học trên lớp</span>' : `<span class="chip">${ws.length} từ</span>`}</div>
+    <div class="bar" aria-label="Đã nhớ ${pct}%"><i style="width:${pct}%"></i></div>
+    <div class="row small muted" style="gap:6px"><span>Đã nhớ ${k}/${ws.length}</span><span class="sp"></span>${gps.map(g => `<span class="chip hz">${h(g.key)}</span>`).join('')}</div>
+  </button>`;
+}
+function renderRoadmap(v) {
+  const assigned = VOCAB.filter(w => w.bai != null);
+  const due = VOCAB.filter(w => isDue(w.id)).length;
+  const knownN = VOCAB.filter(w => known(w.id)).length;
+  const acc = P.quiz.total ? Math.round(P.quiz.correct / P.quiz.total * 100) + '%' : '–';
+  v.innerHTML = `
+    <div class="eyebrow">新HSK教程 4 · 32 buổi</div>
+    <h1>Lộ trình học của bạn</h1>
+    <p class="lede">Mỗi bài gồm từ mới, ngữ pháp trọng điểm và bài luyện tập. Học theo thứ tự trên lớp, rồi ôn lại bằng flashcard mỗi ngày.</p>
+    <div class="summary">
+      <div class="stat"><b>${due}</b><span>từ đến hạn ôn hôm nay</span></div>
+      <div class="stat"><b>${knownN}/${VOCAB.length}</b><span>từ đã nhớ</span></div>
+      <div class="stat"><b>${acc}</b><span>tỉ lệ đúng khi luyện tập</span></div>
+      <div class="stat"><b>${P.done.length}/10</b><span>bài quyển 上 đã học</span></div>
+    </div>
+    <div class="row" style="margin-top:16px">
+      <button class="btn pri" data-act="quickReview">${due ? `Ôn ${due} từ đến hạn` : 'Học từ mới bằng flashcard'}</button>
+      <button class="btn" data-go="luyen-tap">Làm bài luyện tập</button>
+    </div>
+    <div class="book-head"><span class="hz">上册</span><h2 style="margin:0">Quyển thượng · Bài 1–10</h2><span class="muted small">${assigned.length} từ đã gán bài</span></div>
+    <div class="lessons">${BOOK_A.map(lessonCard).join('')}${lessonCard('khac')}</div>
+    <div class="book-head"><span class="hz">下册</span><h2 style="margin:0">Quyển hạ · Bài 11–20</h2><span class="muted small">Chưa có dữ liệu</span></div>
+    <div class="lessons">${BOOK_B.map(b => `<div class="lesson soon"><div class="lesson-num"><b>Bài ${b}</b><span class="chip">Sắp có</span></div><div class="small muted">Thêm từ vựng vào file dữ liệu để mở bài này.</div></div>`).join('')}</div>`;
+}
+ACTIONS.quickReview = () => { fc.cfg = { lessons:BOOK_A.map(String), src:'due', mode:'zh' }; startFlash(); };
+
+/* ---------- lesson detail ---------- */
+function renderLesson(v, b) {
+  const ws = lessonWords(b);
+  const info = lessonInfo(b);
+  const gps = GRAMMAR.filter(g => String(g.bai) === String(b));
+  const done = P.done.includes(String(b));
+  v.innerHTML = `
+    <button class="btn ghost" data-go="lo-trinh">← Lộ trình</button>
+    <div class="row" style="margin:12px 0 4px"><h1 style="margin:0">${lessonLabel(b)}${info ? ` · <span class="hz">${h(info.title)}</span>` : ''}</h1><span class="sp"></span>
+      ${b !== 'khac' ? `<button class="btn ${done ? '' : 'pri'}" data-act="toggleDone" data-b="${b}">${done ? 'Bỏ đánh dấu đã học' : 'Đánh dấu đã học trên lớp'}</button>` : ''}</div>
+    <p class="lede">${ws.length} từ mới${gps.length ? ' · ' + gps.length + ' điểm ngữ pháp' : ''}. Học từ trước, rồi làm ngữ pháp và luyện tập.</p>
+    ${info ? `<section class="panel" style="margin-bottom:20px"><h2>Tóm tắt nội dung bài</h2><ul style="margin:0;padding-left:22px;display:grid;gap:8px">${info.summary.map(item => `<li>${h(item)}</li>`).join('')}</ul></section>` : ''}
+    <div class="row" style="margin-bottom:20px">
+      <button class="btn pri" data-act="lessonFlash" data-b="${b}">Flashcard bài này</button>
+      <button class="btn" data-act="lessonQuiz" data-b="${b}">Luyện tập 10 câu</button>
+    </div>
+    <div class="stack">
+      <section><h2>Từ mới</h2>${vocabTable(ws)}</section>
+      ${gps.length ? `<section><h2>Ngữ pháp trọng điểm</h2><div class="stack">${gps.map(grammarBlock).join('')}</div></section>` : ''}
+    </div>`;
+}
+ACTIONS.toggleDone = t => { const b = t.dataset.b; P.done = P.done.includes(b) ? P.done.filter(x => x !== b) : P.done.concat(b); save(); route(); };
+ACTIONS.lessonFlash = t => { fc.cfg = { lessons:[String(t.dataset.b)], src:'all', mode:'zh' }; startFlash(); };
+ACTIONS.lessonQuiz = t => { qz.cfg = { lesson:t.dataset.b, type:'mix', n:10 }; startQuiz(); };
+
+/* ---------- 2. Vocabulary ---------- */
+function vocabTable(ws) {
+  if (!ws.length) return '<div class="empty">Không có từ nào khớp bộ lọc.</div>';
+  return `<div class="tbl-wrap"><table>
+    <thead><tr><th>Từ</th><th>Pinyin</th><th>Từ loại</th><th>Nghĩa</th><th>Ví dụ</th><th>Bài</th><th></th></tr></thead>
+    <tbody>${ws.map(w => `<tr>
+      <td class="w"><span class="lvl l${Math.min(3, Math.ceil(box(w.id) / 2))}" title="Mức nhớ"></span>${h(w.tu)}</td>
+      <td class="py">${h(w.pinyin)}</td><td class="small muted">${h(w.tuLoai)}</td><td>${h(w.nghia)}</td>
+      <td class="ex">${h(w.viDu)}</td><td class="small">${w.bai ?? '–'}</td>
+      <td><div class="row" style="gap:6px;flex-wrap:nowrap">${spkBtn(w.tu, 'Nghe ' + w.tu)}${spkBtn(w.viDu, 'Nghe câu ví dụ')}</div></td></tr>`).join('')}</tbody></table></div>`;
+}
+const vf = { q:'', lesson:'all-any', cls:'' };
+function renderVocab(v) {
+  const classes = [...new Set(VOCAB.map(w => w.tuLoai))].sort();
+  v.innerHTML = `
+    <h1>Từ vựng</h1>
+    <p class="lede">Kho từ toàn khóa. Tìm theo chữ Hán, pinyin (gõ không dấu cũng được) hoặc nghĩa tiếng Việt. Chấm màu trước từ cho biết mức nhớ của bạn.</p>
+    <div class="filters">
+      <label class="field" for="vq">Tìm kiếm<input id="vq" type="search" placeholder="例如：安排, anpai, sắp xếp" value="${h(vf.q)}"></label>
+      <label class="field" for="vl">Bài<select id="vl"><option value="all-any">Tất cả ${VOCAB.length} từ</option>${lessonOptions(vf.lesson)}</select></label>
+      <label class="field" for="vc">Từ loại<select id="vc"><option value="">Tất cả</option>${classes.map(c => `<option ${c === vf.cls ? 'selected' : ''}>${h(c)}</option>`).join('')}</select></label>
+    </div>
+    <p class="small muted" id="vcount"></p>
+    <div id="vtable"></div>`;
+  if (vf.lesson === 'all-any') $('#vl').value = 'all-any';
+  const strip = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').toLowerCase().replace(/\s+/g, '');
+  const draw = () => {
+    let ws = vf.lesson === 'all-any' ? VOCAB : poolFor(vf.lesson);
+    if (vf.cls) ws = ws.filter(w => w.tuLoai === vf.cls);
+    const q = strip(vf.q.trim());
+    if (q) ws = ws.filter(w => w.tu.includes(vf.q.trim()) || strip(w.pinyin).includes(q) || strip(w.nghia).includes(q));
+    $('#vcount').textContent = ws.length + ' từ';
+    $('#vtable').innerHTML = vocabTable(ws);
+  };
+  $('#vq').addEventListener('input', e => { vf.q = e.target.value; draw(); });
+  $('#vl').addEventListener('change', e => { vf.lesson = e.target.value; draw(); });
+  $('#vc').addEventListener('change', e => { vf.cls = e.target.value; draw(); });
+  draw();
+}
+
+/* ---------- 3. Flashcards ---------- */
+const fc = { cfg:{ lessons:BOOK_A.map(String), src:'due', mode:'zh' }, deck:[], i:0, flipped:false, done:0 };
+function renderFlashSetup(v) {
+  const c = fc.cfg;
+  if (!Array.isArray(c.lessons)) c.lessons = c.lesson === 'all' ? BOOK_A.map(String) : [String(c.lesson || 1)];
+  const pool = poolFor(c.lessons);
+  const dueN = pool.filter(w => isDue(w.id)).length, newN = pool.filter(w => !seen(w.id)).length, wrongN = pool.filter(w => P.wrongs[w.id]).length;
+  v.innerHTML = `
+    <h1>Flashcard</h1>
+    <p class="lede">Lật thẻ, tự đánh giá mức nhớ. Từ bạn chọn "Quên" sẽ quay lại ngay trong lượt; từ "Nhớ" sẽ được hẹn ôn sau 1, 2, 4, 7, 15… ngày.</p>
+    <div class="panel stack">
+      <fieldset style="border:0;padding:0;margin:0;min-width:0">
+        <legend style="font-weight:700;margin-bottom:10px">Chọn các bài muốn học</legend>
+        <div class="lesson-picks" id="lessonPicks">${BOOK_A.map(b => `<label class="lesson-pick"><input type="checkbox" name="flesson" value="${b}" ${c.lessons.includes(String(b)) ? 'checked' : ''}><span><b>Bài ${b}</b> · <span class="hz">${h(LESSON_INFO[b].title)}</span></span></label>`).join('')}</div>
+        <div class="row" style="margin-top:10px"><button class="btn ghost small" type="button" id="flashAll">Chọn tất cả</button><button class="btn ghost small" type="button" id="flashNone">Bỏ chọn</button><span class="small muted" id="flashScope"></span></div>
+      </fieldset>
+      <div class="filters" style="margin:0">
+        <label class="field" for="fs">Nguồn thẻ<select id="fs">
+          <option value="due" ${c.src === 'due' ? 'selected' : ''}>Đến hạn ôn + từ mới (tối đa 20)</option>
+          <option value="all" ${c.src === 'all' ? 'selected' : ''}>Toàn bộ từ trong các bài đã chọn</option>
+          <option value="wrong" ${c.src === 'wrong' ? 'selected' : ''}>Từ hay sai</option></select></label>
+        <label class="field" for="fm">Chiều học<select id="fm">
+          <option value="zh" ${c.mode === 'zh' ? 'selected' : ''}>Trung → Việt</option>
+          <option value="vi" ${c.mode === 'vi' ? 'selected' : ''}>Việt → Trung</option></select></label>
+      </div>
+      <div class="row small"><span class="chip warn" id="flashDue">${dueN} đến hạn</span><span class="chip" id="flashNew">${newN} từ mới</span><span class="chip bad" id="flashWrong">${wrongN} từ hay sai</span></div>
+      <div><button class="btn pri" id="flashStart" data-act="startFlash">Bắt đầu</button></div>
+    </div>`;
+  const syncLessons = () => {
+    c.lessons = [...document.querySelectorAll('input[name="flesson"]:checked')].map(el => el.value);
+    const selectedPool = poolFor(c.lessons);
+    $('#flashDue').textContent = selectedPool.filter(w => isDue(w.id)).length + ' đến hạn';
+    $('#flashNew').textContent = selectedPool.filter(w => !seen(w.id)).length + ' từ mới';
+    $('#flashWrong').textContent = selectedPool.filter(w => P.wrongs[w.id]).length + ' từ hay sai';
+    $('#flashScope').textContent = c.lessons.length ? `Đã chọn ${c.lessons.length} bài · ${selectedPool.length} từ` : 'Hãy chọn ít nhất một bài';
+    $('#flashStart').disabled = !c.lessons.length;
+  };
+  $('#lessonPicks').addEventListener('change', syncLessons);
+  $('#flashAll').addEventListener('click', () => { document.querySelectorAll('input[name="flesson"]').forEach(el => el.checked = true); syncLessons(); });
+  $('#flashNone').addEventListener('click', () => { document.querySelectorAll('input[name="flesson"]').forEach(el => el.checked = false); syncLessons(); });
+  $('#fs').addEventListener('change', e => c.src = e.target.value);
+  $('#fm').addEventListener('change', e => c.mode = e.target.value);
+  syncLessons();
+}
+function startFlash() {
+  const c = fc.cfg;
+  if (!Array.isArray(c.lessons) || !c.lessons.length) { toast('Hãy chọn ít nhất một bài.'); return; }
+  const pool = poolFor(c.lessons);
+  let deck;
+  if (c.src === 'wrong') deck = pool.filter(w => P.wrongs[w.id]).sort((a, b) => P.wrongs[b.id] - P.wrongs[a.id]);
+  else if (c.src === 'all') deck = shuffle(pool);
+  else deck = shuffle(pool.filter(w => isDue(w.id))).concat(shuffle(pool.filter(w => !seen(w.id)))).slice(0, 20);
+  if (!deck.length) { toast(c.src === 'wrong' ? 'Chưa có từ sai nào trong các bài đã chọn.' : 'Không còn từ đến hạn. Chọn "Toàn bộ từ trong các bài đã chọn" để ôn thêm.'); if (location.hash !== '#flashcard') go('flashcard'); return; }
+  Object.assign(fc, { deck:deck.map(w => w.id), i:0, flipped:false, done:0 });
+  if (location.hash !== '#flashcard') { history.replaceState(null, '', '#flashcard'); }
+  renderTabsOnly('flashcard'); drawCard();
+}
+ACTIONS.startFlash = startFlash;
+function renderTabsOnly(tab) { $('#tabs').innerHTML = TABS.map(([k, l]) => `<button class="tab" data-go="${k}" ${k === tab ? 'aria-current="page"' : ''}>${l}</button>`).join(''); }
+function drawCard() {
+  const v = $('#view');
+  if (fc.i >= fc.deck.length) {
+    v.innerHTML = `<div class="fc-wrap"><div class="panel" style="text-align:center"><h2>Xong lượt ôn</h2><p class="muted">Bạn đã lật ${fc.done} thẻ. Lịch ôn tiếp theo đã được lưu cho ${h(active)}.</p>
+      <div class="row" style="justify-content:center"><button class="btn pri" data-go="flashcard">Chọn bộ thẻ khác</button><button class="btn" data-go="luyen-tap">Làm luyện tập</button></div></div></div>`;
+    return;
+  }
+  const w = byId[fc.deck[fc.i]], zh = fc.cfg.mode === 'zh';
+  const chosenLessons = fc.cfg.lessons || [];
+  const scopeLabel = chosenLessons.length === BOOK_A.length ? 'Bài 1–10' : chosenLessons.map(b => `Bài ${b}`).join(', ');
+  const front = zh ? `<div><div class="big">${h(w.tu)}</div></div>` : `<div><div class="vi">${h(w.nghia)}</div><div class="meta"><span class="chip">${h(w.tuLoai)}</span></div></div>`;
+  const back = `<div><div class="big">${h(w.tu)}</div><div class="py">${h(w.pinyin)}</div>
+      <div class="vi" style="margin-top:8px;font-size:22px">${h(w.nghia)}</div>
+      <div class="meta"><span class="chip">${h(w.tuLoai)}</span> <span class="chip">${h(lessonLabel(w.bai ?? 'khac'))}</span></div>
+      <div class="exs">${h(w.viDu)}</div></div>`;
+  v.innerHTML = `<div class="fc-wrap">
+    <div class="progress-line"><span>${h(scopeLabel)}</span><span>${fc.i + 1} / ${fc.deck.length}</span></div>
+    <div class="bar"><i style="width:${fc.i / fc.deck.length * 100}%"></i></div>
+    <div class="card" data-act="flip" role="button" tabindex="0" aria-label="Lật thẻ">
+      <span class="spk">${spkBtn(w.tu, 'Nghe ' + w.tu)}</span>
+      ${fc.flipped ? back : front}
+      <div class="hint">${fc.flipped ? '' : 'Chạm để lật · phím <span class="kbd">Space</span>'}</div>
+    </div>
+    ${fc.flipped ? `<div class="rate">
+      <button class="r0" data-act="rate" data-r="0">Quên<small>ôn lại ngay · 1</small></button>
+      <button class="r1" data-act="rate" data-r="1">Khó<small>mai · 2</small></button>
+      <button class="r2" data-act="rate" data-r="2">Nhớ<small>${INTERVALS[Math.min(7, box(w.id) + 1)]} ngày · 3</small></button>
+      <button class="r3" data-act="rate" data-r="3">Dễ<small>xa hơn · 4</small></button></div>`
+      : `<button class="btn pri" data-act="flip" style="justify-content:center;padding:12px">Lật thẻ</button>`}
+  </div>`;
+  if (fc.flipped || zh) speak(w.tu);
+}
+ACTIONS.flip = () => { if (fc.flipped) return; fc.flipped = true; drawCard(); };
+ACTIONS.rate = t => {
+  const r = +t.dataset.r, id = fc.deck[fc.i];
+  rateCard(id, r); fc.done++;
+  if (r === 0) fc.deck.push(id);
+  fc.i++; fc.flipped = false; drawCard();
+};
+document.addEventListener('keydown', e => {
+  if (location.hash !== '#flashcard' || !fc.deck.length || fc.i >= fc.deck.length || /INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+  if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); ACTIONS.flip(); }
+  if (fc.flipped && /^[1-4]$/.test(e.key)) ACTIONS.rate({ dataset:{ r:+e.key - 1 } });
+});
+
+/* ---------- 4. Grammar ---------- */
+function grammarBlock(g, open = true) {
+  return `<details class="gp" ${open ? 'open' : ''}>
+    <summary><span class="hz">${h(g.key)}</span><b>${h(g.title)}</b><span class="sp"></span><span class="chip">${g.bai ? 'Bài ' + g.bai : 'Bổ sung'}</span></summary>
+    <div class="gp-body">
+      <div class="formula">${h(g.formula)}</div>
+      <p style="margin:0">${h(g.explain)}</p>
+      <ul class="ex-list">${g.ex.map(([zh, vi]) => `<li><div class="row" style="gap:8px;flex-wrap:nowrap"><span class="hz">${h(zh)}</span>${spkBtn(zh)}</div><div class="small muted">${h(vi)}</div></li>`).join('')}</ul>
+      <div class="eyebrow">Bài tập</div>
+      ${g.qs.map((q, qi) => `<div class="mini-q" data-g="${g.id}" data-q="${qi}">
+        <div class="sent">${h(q[0]).replace('___', '<span class="blank" style="display:inline-block;min-width:2.4em;border-bottom:2px solid var(--accent)"></span>')}</div>
+        <div class="mini-opts">${shuffle(q[1].map((o, oi) => [o, oi])).map(([o, oi]) => `<button class="opt" data-act="gAns" data-oi="${oi}"><span class="t-hz hz" style="${o.length > 6 ? 'font-size:16px' : ''}">${h(o)}</span></button>`).join('')}</div>
+      </div>`).join('')}
+    </div></details>`;
+}
+ACTIONS.gAns = t => {
+  const box_ = t.closest('.mini-q'), g = GRAMMAR.find(x => x.id === box_.dataset.g), q = g.qs[+box_.dataset.q];
+  const ok = +t.dataset.oi === q[2];
+  box_.querySelectorAll('.opt').forEach(b => { b.disabled = true; if (+b.dataset.oi === q[2]) b.classList.add('ok'); });
+  if (!ok) t.classList.add('no');
+  P.quiz.total++; if (ok) P.quiz.correct++; save();
+};
+function renderGrammar(v) {
+  v.innerHTML = `<h1>Ngữ pháp trọng điểm</h1>
+    <p class="lede">Mỗi điểm gồm công thức, giải thích ngắn, câu ví dụ có âm thanh và 3 câu bài tập chọn đáp án.</p>
+    <div class="filters"><label class="field" for="gl">Lọc theo bài<select id="gl"><option value="">Tất cả</option>${BOOK_A.map(b => `<option value="${b}">Bài ${b}</option>`).join('')}<option value="null">Bổ sung</option></select></label></div>
+    <div class="stack" id="glist"></div>`;
+  const draw = f => { const gs = GRAMMAR.filter(g => f === '' || String(g.bai) === f); $('#glist').innerHTML = gs.length ? gs.map((g, i) => grammarBlock(g, i === 0)).join('') : '<div class="empty">Bài này chưa có điểm ngữ pháp.</div>'; };
+  $('#gl').addEventListener('change', e => draw(e.target.value)); draw('');
+}
+
+/* ---------- question generators ---------- */
+function pickDistractors(w, n, keyFn, extraFilter) {
+  const seenK = new Set([keyFn(w)]), out = [];
+  const same = shuffle(VOCAB.filter(x => x.id !== w.id && x.tuLoai === w.tuLoai));
+  const rest = shuffle(VOCAB.filter(x => x.id !== w.id && x.tuLoai !== w.tuLoai));
+  for (const x of same.concat(rest)) {
+    if (out.length >= n) break;
+    const k = keyFn(x); if (seenK.has(k) || (extraFilter && !extraFilter(x))) continue;
+    seenK.add(k); out.push(x);
+  }
+  return out;
+}
+const mkOpts = (w, ds, keyFn) => shuffle([w].concat(ds)).map(x => ({ label:keyFn(x), correct:x.id === w.id }));
+const explainOf = w => `<span class="hz">${h(w.tu)}</span> <b>${h(w.pinyin)}</b> · ${h(w.tuLoai)} · ${h(w.nghia)}<br><span class="hz muted">${h(w.viDu)}</span>`;
+const GEN = {
+  nghia: w => ({ type:'nghia', wid:w.id, ask:'Chọn nghĩa đúng', prompt:`<div class="big">${h(w.tu)}</div>`, hz:false, opts:mkOpts(w, pickDistractors(w, 3, x => x.nghia), x => x.nghia) }),
+  tu: w => ({ type:'tu', wid:w.id, ask:'Chọn từ có nghĩa là', prompt:`<div style="font-size:24px;font-weight:600">${h(w.nghia)}</div><span class="chip">${h(w.tuLoai)}</span>`, hz:true, opts:mkOpts(w, pickDistractors(w, 3, x => x.tu), x => x.tu) }),
+  pinyin: w => ({ type:'pinyin', wid:w.id, ask:'Chọn phiên âm đúng', prompt:`<div class="big">${h(w.tu)}</div>`, hz:false, opts:mkOpts(w, pickDistractors(w, 3, x => x.pinyin), x => x.pinyin) }),
+  dien: w => {
+    const sent = w.viDu;
+    return { type:'dien', wid:w.id, ask:'Chọn từ điền vào chỗ trống', prompt:`<div class="sent">${h(sent).split(h(w.tu)).join('<span class="blank"></span>')}</div>`, hz:true,
+      opts:mkOpts(w, pickDistractors(w, 3, x => x.tu, x => !sent.includes(x.tu)), x => x.tu) };
+  },
+  nghe: w => ({ type:'nghe', wid:w.id, ask:'Nghe và chọn nghĩa đúng', say:w.tu, prompt:`<button class="btn pri" data-say="${h(w.tu)}" data-rate="0.8">${ICON.spk.replace('<svg', '<svg width="18" height="18"')} Nghe lại</button>`, hz:false, opts:mkOpts(w, pickDistractors(w, 3, x => x.nghia), x => x.nghia) }),
+  ngheCau: w => ({ type:'ngheCau', wid:w.id, ask:'Nghe câu và chọn từ xuất hiện trong câu', say:w.viDu, prompt:`<button class="btn pri" data-say="${h(w.viDu)}" data-rate="0.85">${ICON.spk.replace('<svg', '<svg width="18" height="18"')} Nghe lại câu</button>`, hz:true, reveal:w.viDu,
+    opts:mkOpts(w, pickDistractors(w, 3, x => x.tu, x => !w.viDu.includes(x.tu)), x => x.tu) }),
+  viet: w => ({ type:'viet', wid:w.id, ask:'Viết chữ Hán cho từ sau', prompt:`<div style="font-size:22px;font-weight:600">${h(w.nghia)}</div><div style="color:var(--accent);font-size:20px">${h(w.pinyin)}</div>`, answer:w.tu })
+};
+const QTYPES = [['mix','Trộn các dạng'],['nghia','Nhìn chữ → chọn nghĩa'],['tu','Nhìn nghĩa → chọn chữ'],['pinyin','Chọn pinyin'],['dien','Điền từ vào câu'],['nghe','Nghe từ → chọn nghĩa'],['ngheCau','Nghe câu → chọn từ'],['viet','Gõ chữ Hán']];
+
+/* ---------- 5. Practice ---------- */
+const qz = { cfg:{ lesson:'all', type:'mix', n:10 }, qs:[], i:0, score:0, answered:false };
+function renderQuizSetup(v) {
+  const c = qz.cfg;
+  v.innerHTML = `<h1>Luyện tập</h1>
+    <p class="lede">Câu hỏi được tạo từ từ vựng của bài bạn chọn. Câu sai được đưa vào danh sách "từ hay sai" và xếp lịch ôn lại ngay trong flashcard.</p>
+    <div class="panel stack">
+      <div class="filters" style="margin:0">
+        <label class="field" for="ql">Bài<select id="ql">${lessonOptions(c.lesson)}<option value="wrong" ${c.lesson === 'wrong' ? 'selected' : ''}>Từ hay sai của tôi</option></select></label>
+        <label class="field" for="qt">Dạng bài<select id="qt">${QTYPES.map(([k, l]) => `<option value="${k}" ${c.type === k ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
+        <label class="field" for="qn">Số câu<select id="qn">${[10, 20, 30].map(n => `<option ${c.n === n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+      </div>
+      <p class="small muted" style="margin:0">Dạng nghe dùng giọng đọc tiếng Trung của trình duyệt. Nếu không nghe thấy gì, hãy cài giọng "Chinese (China)" trong cài đặt ngôn ngữ của máy.</p>
+      <div><button class="btn pri" data-act="startQuiz">Bắt đầu</button></div>
+    </div>`;
+  $('#ql').addEventListener('change', e => c.lesson = e.target.value);
+  $('#qt').addEventListener('change', e => c.type = e.target.value);
+  $('#qn').addEventListener('change', e => c.n = +e.target.value);
+}
+function startQuiz() {
+  const c = qz.cfg;
+  let pool = c.lesson === 'wrong' ? VOCAB.filter(w => P.wrongs[w.id]) : poolFor(c.lesson);
+  if (pool.length < 1) { toast('Chưa có từ nào để luyện ở mục này.'); go('luyen-tap'); return; }
+  const types = c.type === 'mix' ? ['nghia', 'tu', 'pinyin', 'dien', 'dien', 'nghe', 'ngheCau'] : [c.type];
+  let words = shuffle(pool); while (words.length < c.n) words = words.concat(shuffle(pool));
+  qz.qs = words.slice(0, c.n).map(w => GEN[types[Math.floor(Math.random() * types.length)]](w));
+  Object.assign(qz, { i:0, score:0, answered:false });
+  if (location.hash !== '#luyen-tap') history.replaceState(null, '', '#luyen-tap');
+  renderTabsOnly('luyen-tap'); drawQ();
+}
+ACTIONS.startQuiz = startQuiz;
+function qBody(q, state) {
+  // state: {chosen, reveal}
+  const w = byId[q.wid];
+  let opts = '';
+  if (q.type === 'viet') {
+    opts = `<form class="typed" id="typedForm"><input id="typed" autocomplete="off" placeholder="Gõ chữ Hán" value="${h(state.typed || '')}" ${state.reveal ? 'disabled' : ''}><button class="btn pri" ${state.reveal ? 'disabled' : ''}>Kiểm tra</button></form>`;
+    if (state.reveal) opts += `<div class="opt ${state.typed === q.answer ? 'ok' : 'no'}"><span class="t-hz hz">${h(state.typed || '（trống）')}</span><span class="sp"></span>${state.typed === q.answer ? 'Đúng' : 'Đáp án: <span class="hz" style="font-size:20px">' + h(q.answer) + '</span>'}</div>`;
+  } else {
+    opts = `<div class="opts">${q.opts.map((o, oi) => {
+      let cls = '';
+      if (state.reveal) { if (o.correct) cls = 'ok'; else if (oi === state.chosen) cls = 'no'; }
+      else if (oi === state.chosen) cls = 'sel';
+      return `<button class="opt ${cls}" data-act="${state.mock ? 'mAns' : 'qAns'}" data-oi="${oi}" ${state.reveal ? 'disabled' : ''}><span class="k">${'ABCD'[oi]}</span><span class="${q.hz ? 't-hz hz' : ''}">${h(o.label)}</span></button>`;
+    }).join('')}</div>`;
+  }
+  return `<div class="q-prompt"><div class="eyebrow">${h(q.ask)}</div>${q.prompt}
+      ${state.reveal && q.reveal ? `<div class="sent">${h(q.reveal)}</div>` : ''}</div>
+    ${opts}
+    ${state.reveal ? `<div class="explain">${explainOf(w)}</div>` : ''}`;
+}
+function drawQ() {
+  const v = $('#view');
+  if (qz.i >= qz.qs.length) {
+    const pct = Math.round(qz.score / qz.qs.length * 100);
+    v.innerHTML = `<div class="q"><div class="panel" style="text-align:center"><div class="eyebrow">Kết quả</div>
+      <div class="score-big" style="margin:8px 0">${qz.score}/${qz.qs.length}</div><p class="muted">${pct >= 80 ? 'Rất tốt. Chuyển sang bài tiếp theo hoặc thử dạng khó hơn.' : pct >= 50 ? 'Khá. Ôn lại các từ sai bằng flashcard rồi làm lại.' : 'Cần ôn thêm. Học lại từ mới bằng flashcard trước khi làm tiếp.'}</p>
+      <div class="row" style="justify-content:center"><button class="btn pri" data-act="startQuiz">Làm lượt mới</button><button class="btn" data-act="wrongFlash">Ôn từ sai bằng flashcard</button><button class="btn ghost" data-go="luyen-tap">Đổi cài đặt</button></div></div></div>`;
+    return;
+  }
+  const q = qz.qs[qz.i];
+  v.innerHTML = `<div class="q">
+    <div class="progress-line"><span>Câu ${qz.i + 1} / ${qz.qs.length}</span><span>Đúng ${qz.score}</span></div>
+    <div class="bar"><i style="width:${qz.i / qz.qs.length * 100}%"></i></div>
+    <div id="qbody">${qBody(q, { chosen:qz.chosen, typed:qz.typed, reveal:qz.answered })}</div>
+    ${qz.answered ? `<div class="row" style="justify-content:flex-end"><button class="btn pri" data-act="qNext" id="qNextBtn">${qz.i + 1 < qz.qs.length ? 'Câu tiếp →' : 'Xem kết quả'}</button></div>` : ''}
+  </div>`;
+  const f = $('#typedForm');
+  if (f) { f.addEventListener('submit', e => { e.preventDefault(); if (qz.answered) return; qz.typed = $('#typed').value.trim(); finishQ(qz.typed === q.answer); }); if (!qz.answered) $('#typed').focus(); }
+  if (!qz.answered && q.say) setTimeout(() => speak(q.say, q.type === 'ngheCau' ? 0.85 : 0.8), 150);
+  if (qz.answered) { const b = $('#qNextBtn'); b && b.focus(); }
+}
+function finishQ(ok) { qz.answered = true; if (ok) qz.score++; recordAnswer(qz.qs[qz.i].wid, ok); drawQ(); }
+ACTIONS.qAns = t => { if (qz.answered) return; qz.chosen = +t.dataset.oi; finishQ(qz.qs[qz.i].opts[qz.chosen].correct); };
+ACTIONS.qNext = () => { qz.i++; qz.answered = false; qz.chosen = null; qz.typed = ''; drawQ(); };
+ACTIONS.wrongFlash = () => { fc.cfg = { lessons:BOOK_A.map(String), src:'wrong', mode:'zh' }; startFlash(); };
+
+/* ---------- 6. Mock test ---------- */
+const mock = { qs:[], i:0, ans:{}, end:0, timer:null, lesson:'all', submitted:false };
+const MOCK_PARTS = [['nghe','听力 Nghe', 10], ['doc','阅读 Đọc', 15], ['viet','书写 Viết', 5]];
+function renderMockIntro(v) {
+  const last = P.mocks.slice(-3).reverse();
+  v.innerHTML = `<h1>Thi thử</h1>
+    <p class="lede">Đề HSK4 thật gồm 3 phần, tổng 300 điểm, đạt từ 180 điểm. Đề mini bên dưới mô phỏng đúng tỉ lệ ba kỹ năng, câu hỏi tạo từ kho từ vựng của lớp.</p>
+    <div class="parts">
+      <div class="part"><span class="hz">听力</span> <b>Nghe</b><div class="muted small">45 câu · khoảng 30 phút · 100 điểm</div><ul><li>Phần 1: 判断对错 (10 câu)</li><li>Phần 2–3: 选择 hội thoại ngắn và dài (35 câu)</li></ul></div>
+      <div class="part"><span class="hz">阅读</span> <b>Đọc</b><div class="muted small">40 câu · 40 phút · 100 điểm</div><ul><li>Phần 1: 选词填空 (10 câu)</li><li>Phần 2: 排列顺序 (10 câu)</li><li>Phần 3: 短文选择 (20 câu)</li></ul></div>
+      <div class="part"><span class="hz">书写</span> <b>Viết</b><div class="muted small">15 câu · 25 phút · 100 điểm</div><ul><li>Phần 1: 完成句子 (10 câu)</li><li>Phần 2: 看图用词造句 (5 câu)</li></ul></div>
+    </div>
+    <div class="panel stack" style="margin-top:16px">
+      <h2 style="margin:0">Đề mini · 30 câu · 25 phút</h2>
+      <p class="muted" style="margin:0">Nghe 10 câu (nghe từ, nghe câu) · Đọc 15 câu (điền từ vào câu) · Viết 5 câu (gõ chữ Hán). Mỗi phần quy về thang 100, tổng 300. Đáp án chỉ hiện sau khi nộp bài.</p>
+      <div class="filters" style="margin:0"><label class="field" for="ml">Phạm vi<select id="ml">${lessonOptions(mock.lesson)}</select></label></div>
+      <div><button class="btn pri" data-act="startMock">Bắt đầu làm bài</button></div>
+    </div>
+    ${last.length ? `<h2 style="margin-top:24px">Lần thi gần đây</h2><div class="list">${last.map(m => `<div class="list-item"><b style="font-variant-numeric:tabular-nums">${m.total}/300</b><span class="chip ${m.total >= 180 ? 'good' : 'bad'}">${m.total >= 180 ? 'Đạt' : 'Chưa đạt'}</span><span class="small muted">Nghe ${m.parts.nghe} · Đọc ${m.parts.doc} · Viết ${m.parts.viet}</span><span class="sp"></span><span class="small muted">${new Date(m.date).toLocaleDateString('vi-VN')}</span></div>`).join('')}</div>` : ''}`;
+  $('#ml').addEventListener('change', e => mock.lesson = e.target.value);
+}
+ACTIONS.startMock = () => {
+  const pool = shuffle(poolFor(mock.lesson));
+  if (pool.length < 8) { toast('Phạm vi này quá ít từ, hãy chọn "Tất cả".'); return; }
+  const take = n => { const out = []; while (out.length < n) out.push(pool[(mock._k = ((mock._k || 0) + 1)) % pool.length]); return out; };
+  mock._k = 0;
+  const nghe = take(10).map((w, i) => Object.assign(i < 5 ? GEN.nghe(w) : GEN.ngheCau(w), { part:'nghe' }));
+  const doc = take(15).map(w => Object.assign(GEN.dien(w), { part:'doc' }));
+  const viet = take(5).map(w => Object.assign(GEN.viet(w), { part:'viet' }));
+  Object.assign(mock, { qs:nghe.concat(doc, viet), i:0, ans:{}, submitted:false, end:Date.now() + 25 * 60e3 });
+  drawMock();
+  clearInterval(mock.timer);
+  mock.timer = setInterval(tick, 1000);
+};
+function tick() {
+  const el = $('#mtimer'); if (!el) { clearInterval(mock.timer); return; }
+  const left = Math.max(0, mock.end - Date.now());
+  el.textContent = String(Math.floor(left / 60e3)).padStart(2, '0') + ':' + String(Math.floor(left / 1e3) % 60).padStart(2, '0');
+  el.classList.toggle('low', left < 3 * 60e3);
+  if (!left) { clearInterval(mock.timer); toast('Hết giờ, bài đã được nộp.'); submitMock(); }
+}
+function drawMock() {
+  const q = mock.qs[mock.i], part = MOCK_PARTS.find(p => p[0] === q.part);
+  const a = mock.ans[mock.i];
+  $('#view').innerHTML = `
+    <div class="exam-bar"><span class="timer" id="mtimer">25:00</span><span class="chip acc hz">${part[1]}</span><span class="small muted">Câu ${mock.i + 1}/30</span><span class="sp"></span><button class="btn pri" data-act="askSubmit">Nộp bài</button></div>
+    <div id="confirmBox"></div>
+    <div class="q">
+      <div id="qbody">${qBody(q, { chosen:typeof a === 'number' ? a : null, typed:typeof a === 'string' ? a : '', reveal:false, mock:true })}</div>
+      <div class="row"><button class="btn" data-act="mPrev" ${mock.i ? '' : 'disabled'}>← Câu trước</button><span class="sp"></span><button class="btn pri" data-act="mNext" ${mock.i < 29 ? '' : 'disabled'}>Câu sau →</button></div>
+      <div class="palette">${mock.qs.map((_, i) => `<button data-act="mJump" data-i="${i}" class="${mock.ans[i] !== undefined && mock.ans[i] !== '' ? 'ans' : ''} ${i === mock.i ? 'cur' : ''}">${i + 1}</button>`).join('')}</div>
+    </div>`;
+  tick();
+  const f = $('#typedForm');
+  if (f) {
+    const inp = $('#typed');
+    inp.addEventListener('input', () => { mock.ans[mock.i] = inp.value.trim(); });
+    f.addEventListener('submit', e => { e.preventDefault(); mock.ans[mock.i] = inp.value.trim(); if (mock.i < 29) { mock.i++; drawMock(); } });
+    f.querySelector('button').textContent = 'Lưu';
+  }
+  if (q.say && a === undefined) setTimeout(() => speak(q.say, q.type === 'ngheCau' ? 0.85 : 0.8), 150);
+}
+ACTIONS.mAns = t => { mock.ans[mock.i] = +t.dataset.oi; drawMock(); };
+ACTIONS.mPrev = () => { mock.i--; drawMock(); };
+ACTIONS.mNext = () => { mock.i++; drawMock(); };
+ACTIONS.mJump = t => { mock.i = +t.dataset.i; drawMock(); };
+ACTIONS.askSubmit = () => {
+  const left = mock.qs.length - Object.values(mock.ans).filter(x => x !== '' && x !== undefined).length;
+  $('#confirmBox').innerHTML = `<div class="panel row" style="margin-bottom:16px;border-color:var(--warn)"><span>${left ? `Còn ${left} câu chưa làm. ` : ''}Nộp bài và xem kết quả?</span><span class="sp"></span><button class="btn" data-act="cancelSubmit">Làm tiếp</button><button class="btn pri" data-act="doSubmit">Nộp bài</button></div>`;
+};
+ACTIONS.cancelSubmit = () => $('#confirmBox').innerHTML = '';
+ACTIONS.doSubmit = () => submitMock();
+function submitMock() {
+  clearInterval(mock.timer);
+  if (mock.submitted) return; mock.submitted = true;
+  const right = { nghe:0, doc:0, viet:0 }, count = { nghe:0, doc:0, viet:0 };
+  const wrongList = [];
+  mock.qs.forEach((q, i) => {
+    count[q.part]++;
+    const a = mock.ans[i];
+    const ok = q.type === 'viet' ? a === q.answer : (typeof a === 'number' && q.opts[a].correct);
+    if (ok) right[q.part]++; else wrongList.push([q, i]);
+    recordAnswer(q.wid, !!ok);
+  });
+  const parts = {}; let total = 0;
+  for (const k in right) { parts[k] = Math.round(right[k] / count[k] * 100); total += parts[k]; }
+  P.mocks.push({ date:Date.now(), total, parts }); save();
+  $('#view').innerHTML = `<div class="stack">
+    <div class="panel row" style="align-items:flex-end;gap:24px">
+      <div><div class="eyebrow">Tổng điểm quy đổi</div><div class="score-big">${total}<span class="muted" style="font-size:20px">/300</span></div></div>
+      <span class="chip ${total >= 180 ? 'good' : 'bad'}" style="font-size:14px;padding:4px 12px">${total >= 180 ? 'Đạt (≥180)' : 'Chưa đạt (cần 180)'}</span>
+      <span class="sp"></span>
+      ${MOCK_PARTS.map(([k, l]) => `<div><div class="small muted hz">${l}</div><b style="font-size:20px;font-variant-numeric:tabular-nums">${parts[k]}</b><span class="small muted"> · ${right[k]}/${count[k]} câu</span></div>`).join('')}
+    </div>
+    <div class="row"><button class="btn pri" data-go="thi-thu">Về trang thi thử</button><button class="btn" data-act="wrongFlash">Ôn từ sai bằng flashcard</button></div>
+    ${wrongList.length ? `<h2 style="margin:8px 0 0">Xem lại ${wrongList.length} câu sai</h2>
+      <div class="stack">${wrongList.map(([q, i]) => { const a = mock.ans[i]; return `<div class="panel"><div class="eyebrow" style="margin-bottom:8px">Câu ${i + 1} · ${MOCK_PARTS.find(p => p[0] === q.part)[1]}</div>${qBody(q, { chosen:typeof a === 'number' ? a : null, typed:typeof a === 'string' ? a : '', reveal:true })}</div>`; }).join('')}</div>` : '<p>Bạn làm đúng tất cả các câu.</p>'}
+  </div>`;
+}
+
+/* ---------- 7. Progress ---------- */
+function reportText() {
+  const acc = P.quiz.total ? Math.round(P.quiz.correct / P.quiz.total * 100) : 0;
+  const wr = Object.entries(P.wrongs).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([id, n]) => `${byId[id]?.tu}(${n})`).join(', ');
+  return `Báo cáo HSK4 – ${active} – ${new Date().toLocaleDateString('vi-VN')}
+Từ đã nhớ: ${VOCAB.filter(w => known(w.id)).length}/${VOCAB.length}; đã học qua: ${Object.keys(P.srs).length}
+Luyện tập: ${P.quiz.correct}/${P.quiz.total} câu đúng (${acc}%)
+Bài đã học: ${P.done.sort((a, b) => a - b).join(', ') || 'chưa đánh dấu'}
+Từ hay sai: ${wr || 'không có'}`;
+}
+function renderProgress(v) {
+  const wrongs = Object.entries(P.wrongs).sort((a, b) => b[1] - a[1]).slice(0, 15);
+  const perLesson = BOOK_A.concat('khac').map(b => { const ws = lessonWords(b); return [b, ws.filter(w => known(w.id)).length, ws.filter(w => seen(w.id)).length, ws.length]; });
+  const acc = P.quiz.total ? Math.round(P.quiz.correct / P.quiz.total * 100) + '%' : '–';
+  v.innerHTML = `<h1>Tiến độ của bạn</h1>
+    <p class="lede">Dữ liệu lưu trên trình duyệt của máy này. Mỗi học viên nên dùng một hồ sơ riêng; gửi báo cáo cho giáo viên bằng nút sao chép bên dưới.</p>
+    <div class="summary">
+      <div class="stat"><b>${Object.keys(P.srs).length}</b><span>từ đã học qua</span></div>
+      <div class="stat"><b>${VOCAB.filter(w => known(w.id)).length}</b><span>từ đã nhớ chắc</span></div>
+      <div class="stat"><b>${acc}</b><span>đúng trên ${P.quiz.total} câu</span></div>
+    </div>
+    <div class="stack" style="margin-top:20px">
+      <section class="panel"><h2>Theo bài</h2>
+        <div class="stack" style="gap:10px">${perLesson.map(([b, k, s, n]) => { const info = lessonInfo(b); const name = `${lessonLabel(b)}${info ? ` · ${h(info.title)}` : ''}`; return `<div class="row" style="gap:10px;flex-wrap:nowrap">${info ? `<button class="btn ghost small" data-go="bai-${b}" style="width:clamp(120px,32vw,240px);flex:none;justify-content:flex-start;text-align:left;white-space:normal">${name}</button>` : `<span style="width:clamp(120px,32vw,240px);flex:none" class="small">${name}</span>`}<div class="bar sp" style="height:8px"><i style="width:${n ? k / n * 100 : 0}%"></i></div><span class="small muted" style="width:120px;flex:none;text-align:right;font-variant-numeric:tabular-nums">nhớ ${k} · học ${s}/${n}</span></div>`; }).join('')}</div>
+      </section>
+      <section class="panel"><h2>Từ hay sai</h2>
+        ${wrongs.length ? `<div class="list">${wrongs.map(([id, n]) => { const w = byId[id]; return w ? `<div class="list-item"><span class="hz">${h(w.tu)}</span><span class="small"><b style="color:var(--accent)">${h(w.pinyin)}</b> · ${h(w.nghia)}</span><span class="sp"></span><span class="chip bad">sai ${n} lần</span>${spkBtn(w.tu)}</div>` : ''; }).join('')}</div>
+          <div style="margin-top:12px"><button class="btn pri" data-act="wrongFlash">Ôn các từ này</button></div>` : '<p class="muted" style="margin:0">Chưa có từ sai nào. Làm vài lượt luyện tập để hệ thống ghi nhận.</p>'}
+      </section>
+      <section class="panel"><h2>Báo cáo cho giáo viên</h2>
+        <pre id="report" style="white-space:pre-wrap;font-family:var(--ui);font-size:13px;background:var(--surface-2);padding:12px;border-radius:8px;margin:0 0 12px">${h(reportText())}</pre>
+        <button class="btn" data-act="copyReport">Sao chép báo cáo</button>
+      </section>
+      <section class="panel"><h2>Tài khoản học viên</h2>
+        <p class="muted" style="margin:0 0 12px">${authUser ? `Đang đăng nhập với tài khoản <b>${h(active)}</b>. Tiến độ được đồng bộ với Supabase.` : 'Chưa đăng nhập. Tiến độ hiện chỉ được lưu trên trình duyệt này.'}</p>
+        <div class="row" id="resetBox"><button class="btn ghost" data-act="askReset" style="color:var(--bad)">Xóa tiến độ của ${h(active)}</button></div>
+      </section>
+    </div>`;
+}
+ACTIONS.copyReport = () => {
+  const txt = reportText();
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents($('#report')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast('Đã chọn sẵn nội dung, nhấn Ctrl+C để sao chép.'); };
+  try { navigator.clipboard.writeText(txt).then(() => toast('Đã sao chép báo cáo.'), fallback); } catch (e) { fallback(); }
+};
+ACTIONS.askReset = () => { $('#resetBox').innerHTML = `<span>Xóa toàn bộ lịch ôn và điểm luyện tập của ${h(active)}?</span><button class="btn" data-go="tien-do">Hủy</button><button class="btn" style="border-color:var(--bad);color:var(--bad)" data-act="doReset">Xóa</button>`; };
+ACTIONS.doReset = () => { P = blank(); save(); toast('Đã xóa tiến độ.'); route(); };
+
+initAuth();
+</script>
+
+</body></html>
